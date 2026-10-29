@@ -1,0 +1,17 @@
+{
+  "status": "retain_previous_research_candidate",
+  "candidate": null,
+  "metrics": null,
+  "selection_splits": [
+    "train_oof",
+    "validation"
+  ],
+  "test_score_used": false,
+  "frozen_test_pool": [
+    "round137_mix_l1p0",
+    "round137_joint_l1p0"
+  ],
+  "all_new_final_candidates_test_authorized": true,
+  "plan_sha256": "264b5ed6a85003516ea3f09b60bedc87485433ce6c9f4cc45d9022201c560a75",
+  "frozen_manifest_sha256": "19c56b638f79dafae7e31cd80b028c9ced6f4b7487da9e944c1673ac8b81b7b4"
+}

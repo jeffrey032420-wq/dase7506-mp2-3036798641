@@ -1,0 +1,23 @@
+{
+  "status": "completed",
+  "new_fits": 20,
+  "training_configurations": 6,
+  "official_validation_runs": 3,
+  "official_test_runs": 2,
+  "selected_before_test": null,
+  "research_candidate": "RESEARCH_CANDIDATE_ROUND123.json",
+  "research_validation_correct": 754,
+  "previous_validation_high": 754,
+  "current_round_validation_max": 754,
+  "previous_observed_test_high": 392,
+  "current_round_observed_test_max": 395,
+  "maximum_new_candidate_asset_bytes": 62449,
+  "maximum_validation_seconds": 3.7679026999976486,
+  "maximum_test_seconds": 2.331497200008016,
+  "train_oracle_recovered_parent_errors": 214,
+  "all_sources_and_assets_verified": true,
+  "prior_model_packages_preserved": true,
+  "test_error_analysis_performed": false,
+  "test_based_model_selection_performed": false,
+  "source_sha256": "85cf51f82568f582aaf4e313d85db027fb3b1cda4466e1a65a60961f8f35ae47"
+}

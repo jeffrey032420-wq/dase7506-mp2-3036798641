@@ -1,0 +1,8 @@
+{
+  "schema": "joint_four_block123_v1",
+  "family": "joint",
+  "lambda_value": 1.0,
+  "fit_split": "train",
+  "features": "same_four_blocks_as123",
+  "standalone": true
+}

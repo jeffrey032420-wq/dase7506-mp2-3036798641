@@ -1,0 +1,26 @@
+{
+  "status": "static_assembly_completed",
+  "python_syntax_files": 44,
+  "syntax_errors": 0,
+  "copied_feature_sources": 15,
+  "copied_historical_sources": 26,
+  "exact_ast_functions": [
+    "loss",
+    "fit_residual",
+    "metrics",
+    "comparison",
+    "pair_design",
+    "gradient_check",
+    "contracts"
+  ],
+  "original_parent_and_split_sha_verified": true,
+  "personal_absolute_paths_detected": [],
+  "new_fits": 0,
+  "new_predictions": 0,
+  "new_scores": 0,
+  "primary_replay_executed_after_freeze": false,
+  "optional_parent_rebuild_executed_after_freeze": false,
+  "submitted_original_model_or_source_modified": false,
+  "total_published_files": 72,
+  "total_published_bytes": 1307475
+}

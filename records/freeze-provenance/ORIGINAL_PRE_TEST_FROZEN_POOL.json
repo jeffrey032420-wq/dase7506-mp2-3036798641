@@ -1,0 +1,186 @@
+{
+  "status": "both_candidates_frozen_before_first_new_test_prediction",
+  "frozen_at_utc8": "2026-10-30T00:04:49.004877+08:00",
+  "models": [
+    {
+      "name": "round137_mix_l1p0",
+      "family": "mix",
+      "method": "code/method_round137_joint_retrain.py",
+      "checkpoint": "code/runs/round137-joint-retrain/candidates/round137_mix_l1p0",
+      "validation_correct": 753,
+      "train_oof_correct": 4406,
+      "assets": {
+        "config.json": {
+          "bytes": 177,
+          "sha256": "4a28a59645aad5a27d8051642e097c15942e44f7e44e71240873c41256742b62"
+        },
+        "parameters.npz": {
+          "bytes": 62270,
+          "sha256": "f1c93d997c48e11e20824eeb9667203fe2de89ddad9da7f13ac748b3715840a2"
+        }
+      },
+      "uncompressed_asset_bytes": 62447
+    },
+    {
+      "name": "round137_joint_l1p0",
+      "family": "joint",
+      "method": "code/method_round137_joint_retrain.py",
+      "checkpoint": "code/runs/round137-joint-retrain/candidates/round137_joint_l1p0",
+      "validation_correct": 752,
+      "train_oof_correct": 4406,
+      "assets": {
+        "config.json": {
+          "bytes": 179,
+          "sha256": "041359516d344e57c53629a39aede6c30debb7d9aa97a2fdda690c8299b4fe41"
+        },
+        "parameters.npz": {
+          "bytes": 62270,
+          "sha256": "61ff97395a049186e4f2887043d9e1b0755414a0fe42e34a81bba1584010e8fa"
+        }
+      },
+      "uncompressed_asset_bytes": 62449
+    }
+  ],
+  "execution_order": [
+    "round137_mix_l1p0",
+    "round137_joint_l1p0"
+  ],
+  "development_selection": null,
+  "inference_sources": {
+    "check_data.py": "32f203e156e3019f87bb038ade4f303da21ca2f1694bb678a3ddc44661f0b533",
+    "common.py": "aecd10f7ff2e9e82ac5673d34d576e122caac51d2caaa7c7a8aa05906da51f6c",
+    "score_predictions.py": "fe12b809b82117aea722e5dfef7a55a88950a7cf50c49ec2ea007ea847959960",
+    "predict.py": "e7a627fbdc9ef8d4ab3189a6fa5ac02d56ae703ccd1a81507aea0bd66e042162",
+    "method_round137_joint_retrain.py": "30e1945c79af9415cadb4fd8f84846ae18091854df0abca88f5e5c5ab638dd10",
+    "method_round123_grounded_chain.py": "eef68c8a36589398f1b3dc4a6d35abd2702a3d708507cfc30d15ed35d1691f2c",
+    "method_round120_question_interaction.py": "2692ce290fb440ff69038bfa7bf685a8ce0fb43f0be547f1347467c7c46869d0",
+    "method_round110_residual_ablation.py": "d78b5860fd4a690938be8f1caea6446bea2c1b7f9614fe85c154be2474c9da93",
+    "method_round109_arithmetic_residual.py": "778deb806bf9b9c5c7fd2e600ea9940b839c255aca58d04672ea03bedaf721c5",
+    "method_round108_group_subsets.py": "1dfd230664f0dcff844078028b49ffe76e225f8e33eddd024ce3693e4e3f46b0",
+    "numeric_round7_v3.py": "4d5c08dea400ddc9b1ac33b7a58c699d94243e0ee611cc2064f9e6d79dd3b3e8",
+    "method_round11.py": "9b7a313f780e94d2ce79e5542e5d2fdf0045d1edb07bce717d3b6eeaebe33d8a",
+    "method_round7_gated.py": "f61b12e6ba73a198742b19e6a10f727946a8a3173140dcd2032555921f2761a6",
+    "method_round7_v3.py": "a872f363881091ddf9173078e6b36c41dbe0a4dcb07e7a2c60f3caa136f3b24c",
+    "method_round2.py": "c5d4c85b33eea843aa733c95836ee0b18b294ba1702cc3f36cdcdbe9afd73a4d",
+    "features.py": "4ae58271c7a298f39700a23e9caaa2adf9d381c8419d636119f44f8a069b24af",
+    "features_round4.py": "76823c77ae51538be19f1f578949448f715622011d1725ff8dc648273acedd36",
+    "method_round12_dependency.py": "137467338d44547513bc1b41bfb1a2d49190b53c89ed68a3cc5fab11421a2bdc",
+    "requirements.txt": "5c12d85e7c08038d1dd9ffbf8119d12ce808885230a47e2bf65dcd9f114659d5"
+  },
+  "evaluation_sources": {
+    "run_frozen_tests_round137.py": "361e9853afa7b79f223b7067960c290b54b7586feb7a8da6a6a0e10c1edcdd98",
+    "run_frozen_test_round109.py": "ca222f31955376779d16b572f332d04fae674d4a1197a8a302595b4c3706a234"
+  },
+  "evidence_sha256": {
+    "code/runs/round137-joint-retrain/result.json": "0c4a1a1803628932aeef935465c52eea48a6a0cb25a3311760912f37c94222ca",
+    "code/runs/round137-evaluation/all-results.json": "da2ca140ff07eb1a9d859ec9cd4b74151f1e664dcac11de1aff36e968b251015",
+    "code/runs/round137-evaluation/selection-before-test.json": "db7d3a42c0667fac246aefc1b67213386c51dea6598b3edefb480e58cdbeda07",
+    "ROUND137_JOINT_RETRAIN_PLAN.md": "264b5ed6a85003516ea3f09b60bedc87485433ce6c9f4cc45d9022201c560a75"
+  },
+  "frozen_files": {
+    "check_data.py": {
+      "bytes": 1288,
+      "sha256": "32f203e156e3019f87bb038ade4f303da21ca2f1694bb678a3ddc44661f0b533"
+    },
+    "checkpoints/round137_joint_l1p0/config.json": {
+      "bytes": 179,
+      "sha256": "041359516d344e57c53629a39aede6c30debb7d9aa97a2fdda690c8299b4fe41"
+    },
+    "checkpoints/round137_joint_l1p0/parameters.npz": {
+      "bytes": 62270,
+      "sha256": "61ff97395a049186e4f2887043d9e1b0755414a0fe42e34a81bba1584010e8fa"
+    },
+    "checkpoints/round137_mix_l1p0/config.json": {
+      "bytes": 177,
+      "sha256": "4a28a59645aad5a27d8051642e097c15942e44f7e44e71240873c41256742b62"
+    },
+    "checkpoints/round137_mix_l1p0/parameters.npz": {
+      "bytes": 62270,
+      "sha256": "f1c93d997c48e11e20824eeb9667203fe2de89ddad9da7f13ac748b3715840a2"
+    },
+    "common.py": {
+      "bytes": 4192,
+      "sha256": "aecd10f7ff2e9e82ac5673d34d576e122caac51d2caaa7c7a8aa05906da51f6c"
+    },
+    "features.py": {
+      "bytes": 2049,
+      "sha256": "4ae58271c7a298f39700a23e9caaa2adf9d381c8419d636119f44f8a069b24af"
+    },
+    "features_round4.py": {
+      "bytes": 6684,
+      "sha256": "76823c77ae51538be19f1f578949448f715622011d1725ff8dc648273acedd36"
+    },
+    "method_round108_group_subsets.py": {
+      "bytes": 4255,
+      "sha256": "1dfd230664f0dcff844078028b49ffe76e225f8e33eddd024ce3693e4e3f46b0"
+    },
+    "method_round109_arithmetic_residual.py": {
+      "bytes": 2715,
+      "sha256": "778deb806bf9b9c5c7fd2e600ea9940b839c255aca58d04672ea03bedaf721c5"
+    },
+    "method_round11.py": {
+      "bytes": 2422,
+      "sha256": "9b7a313f780e94d2ce79e5542e5d2fdf0045d1edb07bce717d3b6eeaebe33d8a"
+    },
+    "method_round110_residual_ablation.py": {
+      "bytes": 2530,
+      "sha256": "d78b5860fd4a690938be8f1caea6446bea2c1b7f9614fe85c154be2474c9da93"
+    },
+    "method_round120_question_interaction.py": {
+      "bytes": 3676,
+      "sha256": "2692ce290fb440ff69038bfa7bf685a8ce0fb43f0be547f1347467c7c46869d0"
+    },
+    "method_round123_grounded_chain.py": {
+      "bytes": 7255,
+      "sha256": "eef68c8a36589398f1b3dc4a6d35abd2702a3d708507cfc30d15ed35d1691f2c"
+    },
+    "method_round12_dependency.py": {
+      "bytes": 5049,
+      "sha256": "137467338d44547513bc1b41bfb1a2d49190b53c89ed68a3cc5fab11421a2bdc"
+    },
+    "method_round137_joint_retrain.py": {
+      "bytes": 3116,
+      "sha256": "30e1945c79af9415cadb4fd8f84846ae18091854df0abca88f5e5c5ab638dd10"
+    },
+    "method_round2.py": {
+      "bytes": 1381,
+      "sha256": "c5d4c85b33eea843aa733c95836ee0b18b294ba1702cc3f36cdcdbe9afd73a4d"
+    },
+    "method_round7_gated.py": {
+      "bytes": 1118,
+      "sha256": "f61b12e6ba73a198742b19e6a10f727946a8a3173140dcd2032555921f2761a6"
+    },
+    "method_round7_v3.py": {
+      "bytes": 2525,
+      "sha256": "a872f363881091ddf9173078e6b36c41dbe0a4dcb07e7a2c60f3caa136f3b24c"
+    },
+    "numeric_round7_v3.py": {
+      "bytes": 5417,
+      "sha256": "4d5c08dea400ddc9b1ac33b7a58c699d94243e0ee611cc2064f9e6d79dd3b3e8"
+    },
+    "predict.py": {
+      "bytes": 1680,
+      "sha256": "e7a627fbdc9ef8d4ab3189a6fa5ac02d56ae703ccd1a81507aea0bd66e042162"
+    },
+    "requirements.txt": {
+      "bytes": 13,
+      "sha256": "5c12d85e7c08038d1dd9ffbf8119d12ce808885230a47e2bf65dcd9f114659d5"
+    },
+    "score_predictions.py": {
+      "bytes": 1283,
+      "sha256": "fe12b809b82117aea722e5dfef7a55a88950a7cf50c49ec2ea007ea847959960"
+    }
+  },
+  "threads_total": 4,
+  "deadline_prediction_plus_scoring_seconds": 30,
+  "test_used_for_training_or_selection": false,
+  "cpu": "Intel64 Family 6 Model 141 Stepping 1, GenuineIntel",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "dependencies": {
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "scikit-learn": "1.9.1"
+  },
+  "existing_test_aggregates_known": true
+}

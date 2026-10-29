@@ -1,0 +1,110 @@
+{
+  "experts": [
+    {
+      "name": "round108_subsets_l0p01",
+      "correct": 4380,
+      "n": 4755,
+      "recovered_parent_errors": 24,
+      "wrong_on_parent_correct": 48,
+      "changed_choices": 85,
+      "pair_oracle_correct": 4428,
+      "source_sha256": "fabe67711d2d922ab9fbd658d37a724d5738cdb418076f5fc3c1a5a54fb7d41a"
+    },
+    {
+      "name": "round110_final_evidence",
+      "correct": 4398,
+      "n": 4755,
+      "recovered_parent_errors": 21,
+      "wrong_on_parent_correct": 27,
+      "changed_choices": 52,
+      "pair_oracle_correct": 4425,
+      "source_sha256": "45d4a4f03273414b61b982261274da2393ce447829f442a0526aa2f60e87020e"
+    },
+    {
+      "name": "round112_linear_uniform_ce",
+      "correct": 4345,
+      "n": 4755,
+      "recovered_parent_errors": 71,
+      "wrong_on_parent_correct": 130,
+      "changed_choices": 221,
+      "pair_oracle_correct": 4475,
+      "source_sha256": "035d93a19005bb8c9ce6e73ee0a7f1f9207fc8f780b89f79863f5df762b3a378"
+    },
+    {
+      "name": "round112_linear_correct_set_mass",
+      "correct": 4337,
+      "n": 4755,
+      "recovered_parent_errors": 61,
+      "wrong_on_parent_correct": 128,
+      "changed_choices": 207,
+      "pair_oracle_correct": 4465,
+      "source_sha256": "3b01c87cb69993d090629be1e350b824525128f0e92c70b36eda776b630a0d41"
+    },
+    {
+      "name": "round112_pointwise_uniform_ce",
+      "correct": 4305,
+      "n": 4755,
+      "recovered_parent_errors": 87,
+      "wrong_on_parent_correct": 186,
+      "changed_choices": 295,
+      "pair_oracle_correct": 4491,
+      "source_sha256": "286d0a0f0ac12453c658e0ed442a8999a48e502fae6c3ff19c3707c0e659c0bd"
+    },
+    {
+      "name": "round112_pointwise_correct_set_mass",
+      "correct": 4285,
+      "n": 4755,
+      "recovered_parent_errors": 85,
+      "wrong_on_parent_correct": 204,
+      "changed_choices": 320,
+      "pair_oracle_correct": 4489,
+      "source_sha256": "415b9efdc13d5ad3944948f6b5f90d1b3bb214903906ccfc3b177bc0e6d484f8"
+    },
+    {
+      "name": "round112_deepsets_uniform_ce",
+      "correct": 4283,
+      "n": 4755,
+      "recovered_parent_errors": 90,
+      "wrong_on_parent_correct": 211,
+      "changed_choices": 329,
+      "pair_oracle_correct": 4494,
+      "source_sha256": "26b6076534a06dde1f3096c781e5877dd1f1868aa81959b88d91da168544710c"
+    },
+    {
+      "name": "round112_deepsets_correct_set_mass",
+      "correct": 4301,
+      "n": 4755,
+      "recovered_parent_errors": 85,
+      "wrong_on_parent_correct": 188,
+      "changed_choices": 302,
+      "pair_oracle_correct": 4489,
+      "source_sha256": "4fee162c022c33e5f39fbe6887f551e60c906b7294cd7d55e0d63541be710960"
+    },
+    {
+      "name": "round112_attention_uniform_ce",
+      "correct": 4291,
+      "n": 4755,
+      "recovered_parent_errors": 100,
+      "wrong_on_parent_correct": 213,
+      "changed_choices": 343,
+      "pair_oracle_correct": 4504,
+      "source_sha256": "1e387a4a44fca7815ec4e71c968600f316a11476600db8d42855f5a6ffc13712"
+    },
+    {
+      "name": "round112_attention_correct_set_mass",
+      "correct": 4319,
+      "n": 4755,
+      "recovered_parent_errors": 84,
+      "wrong_on_parent_correct": 169,
+      "changed_choices": 283,
+      "pair_oracle_correct": 4488,
+      "source_sha256": "e33ef394098c5d6130a4f65f1b1b633cd02b84cbf7e88bf0acd22060893b7166"
+    }
+  ],
+  "oracle_pool_correct": 4618,
+  "parent_correct": 4404,
+  "n": 4755,
+  "oracle_recovered_parent_errors": 214,
+  "deployable_accuracy": false,
+  "note": "Truth-selected model union is only an upper bound; no fusion is trained or selected."
+}

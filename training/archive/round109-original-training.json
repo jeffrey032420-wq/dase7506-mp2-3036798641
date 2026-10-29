@@ -1,0 +1,703 @@
+{
+  "status": "completed_train_only",
+  "models": [
+    {
+      "name": "round109_full_r0p01",
+      "method": "method_round109_arithmetic_residual.py",
+      "checkpoint": "runs/round109-arithmetic-residual/candidates/round109_full_r0p01",
+      "augmented": false,
+      "lambda": 0.01,
+      "train_oof": {
+        "correct": 4386,
+        "n": 4755,
+        "accuracy": 92.2397476340694,
+        "disagreement_correct": 1745,
+        "disagreement_n": 2114,
+        "single_correct": 435,
+        "single_n": 711
+      },
+      "anchor_train_oof": {
+        "correct": 4387,
+        "n": 4755,
+        "accuracy": 92.26077812828602,
+        "disagreement_correct": 1746,
+        "disagreement_n": 2114,
+        "single_correct": 438,
+        "single_n": 711
+      },
+      "train_resubstitution_not_oof": {
+        "correct": 4511,
+        "n": 4755,
+        "accuracy": 94.86855941114615,
+        "disagreement_correct": 1870,
+        "disagreement_n": 2114,
+        "single_correct": 513,
+        "single_n": 711
+      },
+      "fit": {
+        "success": true,
+        "iterations": 38,
+        "objective": 0.31290736524756174,
+        "initial_objective": 0.3210526387521862,
+        "gradient_inf_norm": 1.5000788299262928e-07,
+        "seconds": 0.00838129996554926,
+        "pairs": 3058,
+        "weight_sum": 1.0
+      },
+      "checks": {
+        "strict_permutation": true,
+        "question_order": true,
+        "new_ids": true,
+        "variable_batch": true,
+        "empty": true,
+        "python_integers": true,
+        "same_answer_same_score": true,
+        "cache_export_exact": true,
+        "zero_residual_exact_anchor": true
+      },
+      "assets": {
+        "anchor/config.json": {
+          "bytes": 315,
+          "sha256": "0af5a84e389c5175890de53bf5253605a6f058cbc8c7877abac2b9f0d3ab1e5e"
+        },
+        "anchor/weights.npz": {
+          "bytes": 25564,
+          "sha256": "5b61e00ba0ed0f17fc0084c827f62e103265f54e4a331c15e12f97e78a4e9652"
+        },
+        "config.json": {
+          "bytes": 271,
+          "sha256": "7abe4fd139ce2f6cad111209d3806ec0171fb59599e127b28f6aa2e9b258468e"
+        },
+        "residual.npz": {
+          "bytes": 1276,
+          "sha256": "0c3823eeea47356a48fafc554d2ca05df09db90c4cee42291c0ca985f4ea27da"
+        }
+      }
+    },
+    {
+      "name": "round109_full_r0p1",
+      "method": "method_round109_arithmetic_residual.py",
+      "checkpoint": "runs/round109-arithmetic-residual/candidates/round109_full_r0p1",
+      "augmented": false,
+      "lambda": 0.1,
+      "train_oof": {
+        "correct": 4391,
+        "n": 4755,
+        "accuracy": 92.34490010515248,
+        "disagreement_correct": 1750,
+        "disagreement_n": 2114,
+        "single_correct": 440,
+        "single_n": 711
+      },
+      "anchor_train_oof": {
+        "correct": 4387,
+        "n": 4755,
+        "accuracy": 92.26077812828602,
+        "disagreement_correct": 1746,
+        "disagreement_n": 2114,
+        "single_correct": 438,
+        "single_n": 711
+      },
+      "train_resubstitution_not_oof": {
+        "correct": 4520,
+        "n": 4755,
+        "accuracy": 95.05783385909568,
+        "disagreement_correct": 1879,
+        "disagreement_n": 2114,
+        "single_correct": 521,
+        "single_n": 711
+      },
+      "fit": {
+        "success": true,
+        "iterations": 15,
+        "objective": 0.3155850186456335,
+        "initial_objective": 0.3210526387521862,
+        "gradient_inf_norm": 9.318702490820202e-08,
+        "seconds": 0.004103899991605431,
+        "pairs": 3058,
+        "weight_sum": 1.0
+      },
+      "checks": {
+        "strict_permutation": true,
+        "question_order": true,
+        "new_ids": true,
+        "variable_batch": true,
+        "empty": true,
+        "python_integers": true,
+        "same_answer_same_score": true,
+        "cache_export_exact": true,
+        "zero_residual_exact_anchor": true
+      },
+      "assets": {
+        "anchor/config.json": {
+          "bytes": 315,
+          "sha256": "0af5a84e389c5175890de53bf5253605a6f058cbc8c7877abac2b9f0d3ab1e5e"
+        },
+        "anchor/weights.npz": {
+          "bytes": 25564,
+          "sha256": "5b61e00ba0ed0f17fc0084c827f62e103265f54e4a331c15e12f97e78a4e9652"
+        },
+        "config.json": {
+          "bytes": 270,
+          "sha256": "0e83eea1771464e2f678e8f2441806ed6bd10af63671d561c89410878dbfb767"
+        },
+        "residual.npz": {
+          "bytes": 1276,
+          "sha256": "042c0b72fd7edf6c5d1b324c4b876d737264c98627edf562e9e7d1d52f08a5c2"
+        }
+      }
+    },
+    {
+      "name": "round109_subsets_r0p01",
+      "method": "method_round109_arithmetic_residual.py",
+      "checkpoint": "runs/round109-arithmetic-residual/candidates/round109_subsets_r0p01",
+      "augmented": true,
+      "lambda": 0.01,
+      "train_oof": {
+        "correct": 4390,
+        "n": 4755,
+        "accuracy": 92.32386961093586,
+        "disagreement_correct": 1749,
+        "disagreement_n": 2114,
+        "single_correct": 439,
+        "single_n": 711
+      },
+      "anchor_train_oof": {
+        "correct": 4380,
+        "n": 4755,
+        "accuracy": 92.11356466876973,
+        "disagreement_correct": 1739,
+        "disagreement_n": 2114,
+        "single_correct": 443,
+        "single_n": 711
+      },
+      "train_resubstitution_not_oof": {
+        "correct": 4504,
+        "n": 4755,
+        "accuracy": 94.72134595162987,
+        "disagreement_correct": 1863,
+        "disagreement_n": 2114,
+        "single_correct": 505,
+        "single_n": 711
+      },
+      "fit": {
+        "success": true,
+        "iterations": 36,
+        "objective": 0.3045610106757054,
+        "initial_objective": 0.3150884933063725,
+        "gradient_inf_norm": 2.884055605187428e-07,
+        "seconds": 0.00864209997234866,
+        "pairs": 3058,
+        "weight_sum": 1.0
+      },
+      "checks": {
+        "strict_permutation": true,
+        "question_order": true,
+        "new_ids": true,
+        "variable_batch": true,
+        "empty": true,
+        "python_integers": true,
+        "same_answer_same_score": true,
+        "cache_export_exact": true,
+        "zero_residual_exact_anchor": true
+      },
+      "assets": {
+        "anchor/config.json": {
+          "bytes": 314,
+          "sha256": "ddb50bab014d47e7df07fd321bbe967e8affe8e387edfb70a1f0eca5a7017841"
+        },
+        "anchor/weights.npz": {
+          "bytes": 25564,
+          "sha256": "0211a8e667cbeb4e36ee788804a4c35c7754f75bbfff4af05099dadc9ffc02f6"
+        },
+        "config.json": {
+          "bytes": 270,
+          "sha256": "4941b331b37c1c972f4504f0a4a61f6b4415a8c64ba0b42d3e8839218213160b"
+        },
+        "residual.npz": {
+          "bytes": 1276,
+          "sha256": "0be6568ae8aeded18ed5f58252378fa18a32338d74bff9b61a6cdd2acf011174"
+        }
+      }
+    },
+    {
+      "name": "round109_subsets_r0p1",
+      "method": "method_round109_arithmetic_residual.py",
+      "checkpoint": "runs/round109-arithmetic-residual/candidates/round109_subsets_r0p1",
+      "augmented": true,
+      "lambda": 0.1,
+      "train_oof": {
+        "correct": 4392,
+        "n": 4755,
+        "accuracy": 92.36593059936908,
+        "disagreement_correct": 1751,
+        "disagreement_n": 2114,
+        "single_correct": 445,
+        "single_n": 711
+      },
+      "anchor_train_oof": {
+        "correct": 4380,
+        "n": 4755,
+        "accuracy": 92.11356466876973,
+        "disagreement_correct": 1739,
+        "disagreement_n": 2114,
+        "single_correct": 443,
+        "single_n": 711
+      },
+      "train_resubstitution_not_oof": {
+        "correct": 4510,
+        "n": 4755,
+        "accuracy": 94.84752891692955,
+        "disagreement_correct": 1869,
+        "disagreement_n": 2114,
+        "single_correct": 512,
+        "single_n": 711
+      },
+      "fit": {
+        "success": true,
+        "iterations": 17,
+        "objective": 0.30803125943202686,
+        "initial_objective": 0.3150884933063725,
+        "gradient_inf_norm": 1.262887705695548e-07,
+        "seconds": 0.004489400016609579,
+        "pairs": 3058,
+        "weight_sum": 1.0
+      },
+      "checks": {
+        "strict_permutation": true,
+        "question_order": true,
+        "new_ids": true,
+        "variable_batch": true,
+        "empty": true,
+        "python_integers": true,
+        "same_answer_same_score": true,
+        "cache_export_exact": true,
+        "zero_residual_exact_anchor": true
+      },
+      "assets": {
+        "anchor/config.json": {
+          "bytes": 314,
+          "sha256": "ddb50bab014d47e7df07fd321bbe967e8affe8e387edfb70a1f0eca5a7017841"
+        },
+        "anchor/weights.npz": {
+          "bytes": 25564,
+          "sha256": "0211a8e667cbeb4e36ee788804a4c35c7754f75bbfff4af05099dadc9ffc02f6"
+        },
+        "config.json": {
+          "bytes": 269,
+          "sha256": "11a7b1681580a0727bb4fcf00c0444a23d99d363d8055d06f661b7bb29c001c9"
+        },
+        "residual.npz": {
+          "bytes": 1276,
+          "sha256": "6f625758c2d46ac511e95f822915737288b437e3e6a1c1658cc7882ef336353e"
+        }
+      }
+    }
+  ],
+  "fold_records": [
+    {
+      "fold": 0,
+      "augmented": false,
+      "lambda": 0.01,
+      "success": true,
+      "iterations": 40,
+      "objective": 0.34222470570453645,
+      "initial_objective": 0.35703511418771217,
+      "gradient_inf_norm": 3.0087711448857765e-07,
+      "seconds": 0.006944099965039641,
+      "pairs": 2012,
+      "weight_sum": 1.0,
+      "held": {
+        "correct": 1459,
+        "n": 1585,
+        "accuracy": 92.05047318611987,
+        "disagreement_correct": 581,
+        "disagreement_n": 707,
+        "single_correct": 144,
+        "single_n": 237
+      },
+      "anchor_held": {
+        "correct": 1463,
+        "n": 1585,
+        "accuracy": 92.30283911671924,
+        "disagreement_correct": 585,
+        "disagreement_n": 707,
+        "single_correct": 148,
+        "single_n": 237
+      }
+    },
+    {
+      "fold": 0,
+      "augmented": false,
+      "lambda": 0.1,
+      "success": true,
+      "iterations": 16,
+      "objective": 0.3481291994232716,
+      "initial_objective": 0.35703511418771217,
+      "gradient_inf_norm": 7.87284157226318e-07,
+      "seconds": 0.003443499968852848,
+      "pairs": 2012,
+      "weight_sum": 1.0,
+      "held": {
+        "correct": 1465,
+        "n": 1585,
+        "accuracy": 92.42902208201893,
+        "disagreement_correct": 587,
+        "disagreement_n": 707,
+        "single_correct": 147,
+        "single_n": 237
+      },
+      "anchor_held": {
+        "correct": 1463,
+        "n": 1585,
+        "accuracy": 92.30283911671924,
+        "disagreement_correct": 585,
+        "disagreement_n": 707,
+        "single_correct": 148,
+        "single_n": 237
+      }
+    },
+    {
+      "fold": 0,
+      "augmented": true,
+      "lambda": 0.01,
+      "success": true,
+      "iterations": 41,
+      "objective": 0.3245918930690304,
+      "initial_objective": 0.34167616209405766,
+      "gradient_inf_norm": 1.5832010639591984e-07,
+      "seconds": 0.007498099992517382,
+      "pairs": 2012,
+      "weight_sum": 1.0,
+      "held": {
+        "correct": 1457,
+        "n": 1585,
+        "accuracy": 91.9242902208202,
+        "disagreement_correct": 579,
+        "disagreement_n": 707,
+        "single_correct": 142,
+        "single_n": 237
+      },
+      "anchor_held": {
+        "correct": 1459,
+        "n": 1585,
+        "accuracy": 92.05047318611987,
+        "disagreement_correct": 581,
+        "disagreement_n": 707,
+        "single_correct": 148,
+        "single_n": 237
+      }
+    },
+    {
+      "fold": 0,
+      "augmented": true,
+      "lambda": 0.1,
+      "success": true,
+      "iterations": 17,
+      "objective": 0.33126153709377015,
+      "initial_objective": 0.34167616209405766,
+      "gradient_inf_norm": 1.5458249901824372e-07,
+      "seconds": 0.0031377000268548727,
+      "pairs": 2012,
+      "weight_sum": 1.0,
+      "held": {
+        "correct": 1461,
+        "n": 1585,
+        "accuracy": 92.17665615141955,
+        "disagreement_correct": 583,
+        "disagreement_n": 707,
+        "single_correct": 147,
+        "single_n": 237
+      },
+      "anchor_held": {
+        "correct": 1459,
+        "n": 1585,
+        "accuracy": 92.05047318611987,
+        "disagreement_correct": 581,
+        "disagreement_n": 707,
+        "single_correct": 148,
+        "single_n": 237
+      }
+    },
+    {
+      "fold": 1,
+      "augmented": false,
+      "lambda": 0.01,
+      "success": true,
+      "iterations": 39,
+      "objective": 0.3334963881548756,
+      "initial_objective": 0.344347411501264,
+      "gradient_inf_norm": 1.1704753203494768e-07,
+      "seconds": 0.006725000042933971,
+      "pairs": 2060,
+      "weight_sum": 1.0000000000000002,
+      "held": {
+        "correct": 1457,
+        "n": 1585,
+        "accuracy": 91.9242902208202,
+        "disagreement_correct": 570,
+        "disagreement_n": 698,
+        "single_correct": 133,
+        "single_n": 237
+      },
+      "anchor_held": {
+        "correct": 1455,
+        "n": 1585,
+        "accuracy": 91.7981072555205,
+        "disagreement_correct": 568,
+        "disagreement_n": 698,
+        "single_correct": 136,
+        "single_n": 237
+      }
+    },
+    {
+      "fold": 1,
+      "augmented": false,
+      "lambda": 0.1,
+      "success": true,
+      "iterations": 16,
+      "objective": 0.3373549146123523,
+      "initial_objective": 0.344347411501264,
+      "gradient_inf_norm": 3.2623424570240797e-07,
+      "seconds": 0.0035865000099875033,
+      "pairs": 2060,
+      "weight_sum": 1.0000000000000002,
+      "held": {
+        "correct": 1454,
+        "n": 1585,
+        "accuracy": 91.73501577287067,
+        "disagreement_correct": 567,
+        "disagreement_n": 698,
+        "single_correct": 135,
+        "single_n": 237
+      },
+      "anchor_held": {
+        "correct": 1455,
+        "n": 1585,
+        "accuracy": 91.7981072555205,
+        "disagreement_correct": 568,
+        "disagreement_n": 698,
+        "single_correct": 136,
+        "single_n": 237
+      }
+    },
+    {
+      "fold": 1,
+      "augmented": true,
+      "lambda": 0.01,
+      "success": true,
+      "iterations": 41,
+      "objective": 0.31782704295501846,
+      "initial_objective": 0.3324790854038975,
+      "gradient_inf_norm": 3.610074987371375e-07,
+      "seconds": 0.0076787000289186835,
+      "pairs": 2060,
+      "weight_sum": 1.0000000000000002,
+      "held": {
+        "correct": 1459,
+        "n": 1585,
+        "accuracy": 92.05047318611987,
+        "disagreement_correct": 572,
+        "disagreement_n": 698,
+        "single_correct": 136,
+        "single_n": 237
+      },
+      "anchor_held": {
+        "correct": 1455,
+        "n": 1585,
+        "accuracy": 91.7981072555205,
+        "disagreement_correct": 568,
+        "disagreement_n": 698,
+        "single_correct": 139,
+        "single_n": 237
+      }
+    },
+    {
+      "fold": 1,
+      "augmented": true,
+      "lambda": 0.1,
+      "success": true,
+      "iterations": 17,
+      "objective": 0.32340703102603197,
+      "initial_objective": 0.3324790854038975,
+      "gradient_inf_norm": 1.2509608412515638e-07,
+      "seconds": 0.004023599962238222,
+      "pairs": 2060,
+      "weight_sum": 1.0000000000000002,
+      "held": {
+        "correct": 1460,
+        "n": 1585,
+        "accuracy": 92.11356466876973,
+        "disagreement_correct": 573,
+        "disagreement_n": 698,
+        "single_correct": 140,
+        "single_n": 237
+      },
+      "anchor_held": {
+        "correct": 1455,
+        "n": 1585,
+        "accuracy": 91.7981072555205,
+        "disagreement_correct": 568,
+        "disagreement_n": 698,
+        "single_correct": 139,
+        "single_n": 237
+      }
+    },
+    {
+      "fold": 2,
+      "augmented": false,
+      "lambda": 0.01,
+      "success": true,
+      "iterations": 39,
+      "objective": 0.3278956177876991,
+      "initial_objective": 0.3372243358770937,
+      "gradient_inf_norm": 1.8363013853353767e-07,
+      "seconds": 0.006960100028663874,
+      "pairs": 2044,
+      "weight_sum": 1.0000000000000002,
+      "held": {
+        "correct": 1470,
+        "n": 1585,
+        "accuracy": 92.74447949526814,
+        "disagreement_correct": 594,
+        "disagreement_n": 709,
+        "single_correct": 158,
+        "single_n": 237
+      },
+      "anchor_held": {
+        "correct": 1469,
+        "n": 1585,
+        "accuracy": 92.6813880126183,
+        "disagreement_correct": 593,
+        "disagreement_n": 709,
+        "single_correct": 154,
+        "single_n": 237
+      }
+    },
+    {
+      "fold": 2,
+      "augmented": false,
+      "lambda": 0.1,
+      "success": true,
+      "iterations": 16,
+      "objective": 0.3306095413870074,
+      "initial_objective": 0.3372243358770937,
+      "gradient_inf_norm": 1.0625464508359946e-07,
+      "seconds": 0.003680499969050288,
+      "pairs": 2044,
+      "weight_sum": 1.0000000000000002,
+      "held": {
+        "correct": 1472,
+        "n": 1585,
+        "accuracy": 92.87066246056781,
+        "disagreement_correct": 596,
+        "disagreement_n": 709,
+        "single_correct": 158,
+        "single_n": 237
+      },
+      "anchor_held": {
+        "correct": 1469,
+        "n": 1585,
+        "accuracy": 92.6813880126183,
+        "disagreement_correct": 593,
+        "disagreement_n": 709,
+        "single_correct": 154,
+        "single_n": 237
+      }
+    },
+    {
+      "fold": 2,
+      "augmented": true,
+      "lambda": 0.01,
+      "success": true,
+      "iterations": 40,
+      "objective": 0.3153643414418182,
+      "initial_objective": 0.3283146275100309,
+      "gradient_inf_norm": 1.27012675732582e-07,
+      "seconds": 0.008314299979247153,
+      "pairs": 2044,
+      "weight_sum": 1.0000000000000002,
+      "held": {
+        "correct": 1474,
+        "n": 1585,
+        "accuracy": 92.9968454258675,
+        "disagreement_correct": 598,
+        "disagreement_n": 709,
+        "single_correct": 161,
+        "single_n": 237
+      },
+      "anchor_held": {
+        "correct": 1466,
+        "n": 1585,
+        "accuracy": 92.49211356466877,
+        "disagreement_correct": 590,
+        "disagreement_n": 709,
+        "single_correct": 156,
+        "single_n": 237
+      }
+    },
+    {
+      "fold": 2,
+      "augmented": true,
+      "lambda": 0.1,
+      "success": true,
+      "iterations": 16,
+      "objective": 0.31926094575457303,
+      "initial_objective": 0.3283146275100309,
+      "gradient_inf_norm": 5.230329921338678e-08,
+      "seconds": 0.003740200016181916,
+      "pairs": 2044,
+      "weight_sum": 1.0000000000000002,
+      "held": {
+        "correct": 1471,
+        "n": 1585,
+        "accuracy": 92.80757097791799,
+        "disagreement_correct": 595,
+        "disagreement_n": 709,
+        "single_correct": 158,
+        "single_n": 237
+      },
+      "anchor_held": {
+        "correct": 1466,
+        "n": 1585,
+        "accuracy": 92.49211356466877,
+        "disagreement_correct": 590,
+        "disagreement_n": 709,
+        "single_correct": 156,
+        "single_n": 237
+      }
+    }
+  ],
+  "sources": {
+    "method_round109_arithmetic_residual.py": "778deb806bf9b9c5c7fd2e600ea9940b839c255aca58d04672ea03bedaf721c5",
+    "method_round108_group_subsets.py": "1dfd230664f0dcff844078028b49ffe76e225f8e33eddd024ce3693e4e3f46b0",
+    "common.py": "aecd10f7ff2e9e82ac5673d34d576e122caac51d2caaa7c7a8aa05906da51f6c",
+    "numeric_round7_v3.py": "4d5c08dea400ddc9b1ac33b7a58c699d94243e0ee611cc2064f9e6d79dd3b3e8",
+    "train_round109_arithmetic_residual.py": "faaa55a7790b88e0dafd42a38e5257b4ba1aaa483930e772b9987d56685081fe",
+    "train_round108_group_subsets.py": "440cf237ccbded482516bbea5184c873886328c1be7bbfbefab238129d1c85f8",
+    "train_round1.py": "cad7b1b25e413d64f81303370879b2bd1b3cd171758743bb60b4f78ac83bb8c4",
+    "features.py": "4ae58271c7a298f39700a23e9caaa2adf9d381c8419d636119f44f8a069b24af"
+  },
+  "plan_sha256": "b16fe1adc658b1b68a068d04d85cbbf6b535fd46eefdbb97633c5e6278cab5ff",
+  "inherited_hashes": {
+    "result.json": "4bf8310038b72b1a01df02930d6f74ac7de8d9f875ebb285e77b0889d82556c3",
+    "folds.json": "63decfe02c761625152effd60dde1ab3be6b32b1ebf67e888a5630fefef32ee7",
+    "round108_full_l0p01-oof-scores.npy": "5241928f6c27a338c0e5a6d77721fc93583fb6a60b11c7a460e3955bb4e48cb0",
+    "fold-models/fold0-round108_full_l0p01/weights.npz": "1eff1af73f6b21c33389bab5ea0230b88f72d0dd4b1f58c702f32012f4dfff38",
+    "fold-models/fold1-round108_full_l0p01/weights.npz": "e6d9710e8a8741ad57ee570b10fe6cd66db4ea7d8c7d78075de2b777bca40874",
+    "fold-models/fold2-round108_full_l0p01/weights.npz": "a598a4c76566e0caacf2392970a4389919b8a15570ea9897e8add2386a42627a",
+    "round108_subsets_l0p01-oof-scores.npy": "fabe67711d2d922ab9fbd658d37a724d5738cdb418076f5fc3c1a5a54fb7d41a",
+    "fold-models/fold0-round108_subsets_l0p01/weights.npz": "f6cd2f4c6cbe92129b9980f3726626829614e11aa5fc05d0d8218eb8b4f78a9b",
+    "fold-models/fold1-round108_subsets_l0p01/weights.npz": "787e5c7a2332999218513584a73fca32e05b1047372717615be589d38cac4fa4",
+    "fold-models/fold2-round108_subsets_l0p01/weights.npz": "8f82e24a36f1db2ae7593192ab64aff27a912ba95915089a34edec5d3c4e69a5"
+  },
+  "mathematical_checks": {
+    "finite_difference_max_error": 6.058556434318518e-11,
+    "duplicate_pair_invariance": true
+  },
+  "model_fits": 34,
+  "threads_total": 4,
+  "seconds": 14.553698800038546,
+  "validation_used": false,
+  "test_used": false
+}

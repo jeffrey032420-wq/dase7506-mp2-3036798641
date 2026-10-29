@@ -1,0 +1,5 @@
+# Evidence chronology
+
+These are original research records, not a new set of experiments. Some historical documents state that Round123 was retained or that test did not choose that batch's candidates. Those statements describe the recorded earlier stage. The later user-directed final selection of Round137 joint was test informed, as disclosed in the root report and `AI_DISCLOSURE.md`.
+
+Repository-relative paths in original records refer to the larger research workspace, which is not reproduced wholesale. Absolute local user-profile paths in historical prose/traceback excerpts are redacted in this public copy; final score JSON, frozen code and model weights are unchanged. The submitted inference files live in `code/`, and portable training files in `training/`. No reference data or per-question test predictions are included. Official final score JSON is in `scores/`; original aggregate timing evidence is in `freeze-provenance/original-test-result.json`. Historical result records do not certify the new portable training wrappers.

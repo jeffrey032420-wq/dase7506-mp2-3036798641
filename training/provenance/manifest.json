@@ -1,0 +1,357 @@
+{
+  "status": "assembled_without_training_prediction_or_scoring",
+  "scope": "Round137 frozen-parent replay; no claim of a from-scratch historical rerun",
+  "original_train_only_audit_sha256": "96ac7df7f18f239dd80fddc598c08495e31079a4a4364a7621fcc2e636bea330",
+  "original_training_result_sha256": "0c4a1a1803628932aeef935465c52eea48a6a0cb25a3311760912f37c94222ca",
+  "parent_centers_and_fixed_split": [
+    {
+      "published": "parents/full.npz",
+      "original": "code/runs/round137-train-audit/full.npz",
+      "bytes": 62270,
+      "sha256": "a410fb64d203e6d009931030b80db3248044b5cc110e637ec5ad1516cc2ee665",
+      "role": "Train-only four-block parameter/scaler center, not a fitted Round137 update"
+    },
+    {
+      "published": "parents/fold0.npz",
+      "original": "code/runs/round137-train-audit/fold0.npz",
+      "bytes": 62270,
+      "sha256": "51170bf4b51750bf561bd2e70205be66fd9c79a2566c510caa9ae4b92c6b55a1",
+      "role": "Train-only four-block parameter/scaler center, not a fitted Round137 update"
+    },
+    {
+      "published": "parents/fold1.npz",
+      "original": "code/runs/round137-train-audit/fold1.npz",
+      "bytes": 62270,
+      "sha256": "fe76cf13402038b694db9cb43c53cb7145239828e36ca9a0377e3383dab45709",
+      "role": "Train-only four-block parameter/scaler center, not a fitted Round137 update"
+    },
+    {
+      "published": "parents/fold2.npz",
+      "original": "code/runs/round137-train-audit/fold2.npz",
+      "bytes": 62270,
+      "sha256": "33bdde41647d059c5ff981a0349c9606590b8ad7f3ba42101d6a4b19bf768406",
+      "role": "Train-only four-block parameter/scaler center, not a fitted Round137 update"
+    },
+    {
+      "published": "parents/folds.json",
+      "original": "code/runs/round108-group-subsets/folds.json",
+      "bytes": 182327,
+      "sha256": "63decfe02c761625152effd60dde1ab3be6b32b1ebf67e888a5630fefef32ee7"
+    },
+    {
+      "published": "parents/parent-oof-scores.npy",
+      "original": "code/runs/round123-grounded-chain/round123_both_l0p01-oof-scores.npy",
+      "bytes": 152288,
+      "sha256": "1ce1d590d03149eb70cb7ffa849a0757282f7c0c3b7166005339976b17d59518"
+    }
+  ],
+  "block_origins": {
+    "full": {
+      "A": {
+        "original": "code/runs/round123-grounded-chain/candidates/round123_both_l0p01/parent/parent/anchor/weights.npz",
+        "sha256": "0211a8e667cbeb4e36ee788804a4c35c7754f75bbfff4af05099dadc9ffc02f6",
+        "fields": [
+          "mean",
+          "scale",
+          "weight"
+        ]
+      },
+      "L": {
+        "original": "code/runs/round123-grounded-chain/candidates/round123_both_l0p01/parent/parent/residual.npz",
+        "sha256": "b3af1a4d3fd63c7e65798a6b8b07c4fa75502000ae5797639b0c144446d41bd3",
+        "fields": [
+          "mean",
+          "scale",
+          "weight"
+        ]
+      },
+      "I": {
+        "original": "code/runs/round123-grounded-chain/candidates/round123_both_l0p01/parent/interaction.npz",
+        "sha256": "147dbaad30a36b4e96d8775bd489e203a1194888cb5253d30b4f9454d18a1fe9",
+        "fields": [
+          "mean",
+          "scale",
+          "weight"
+        ]
+      },
+      "G": {
+        "original": "code/runs/round123-grounded-chain/candidates/round123_both_l0p01/chain.npz",
+        "sha256": "399a6e7b335f3caa98a4da11cacdff6df4854a2c59f62807ece1459e6391c883",
+        "fields": [
+          "mean",
+          "scale",
+          "weight"
+        ]
+      }
+    },
+    "fold0": {
+      "A": {
+        "original": "code/runs/round108-group-subsets/fold-models/fold0-round108_subsets_l0p01/weights.npz",
+        "sha256": "f6cd2f4c6cbe92129b9980f3726626829614e11aa5fc05d0d8218eb8b4f78a9b",
+        "fields": [
+          "mean",
+          "scale",
+          "weight"
+        ]
+      },
+      "L": {
+        "original": "code/runs/round110-residual-ablation/outer0-final_evidence.npz",
+        "sha256": "c4d3bd1d5fda1dc53b8cdc3d9c5e1d4f09543fe06bf3d160da2b63457d9ecb62",
+        "fields": [
+          "mean",
+          "scale",
+          "weight"
+        ]
+      },
+      "I": {
+        "original": "code/runs/round120-question-interaction/fold0-question_both.npz",
+        "sha256": "59e526f4c9a43daaace3c921bd142ca5fbcd1daeb9ceed05a6f48a811c5b8257",
+        "fields": [
+          "mean",
+          "scale",
+          "weight"
+        ]
+      },
+      "G": {
+        "original": "code/runs/round123-grounded-chain/fold0-round123_both_l0p01.npz",
+        "sha256": "90e90131e7583109e670af7b848e1d734e0acd5611fd0a0740434fc669cb19b5",
+        "fields": [
+          "mean",
+          "scale",
+          "weight"
+        ]
+      }
+    },
+    "fold1": {
+      "A": {
+        "original": "code/runs/round108-group-subsets/fold-models/fold1-round108_subsets_l0p01/weights.npz",
+        "sha256": "787e5c7a2332999218513584a73fca32e05b1047372717615be589d38cac4fa4",
+        "fields": [
+          "mean",
+          "scale",
+          "weight"
+        ]
+      },
+      "L": {
+        "original": "code/runs/round110-residual-ablation/outer1-final_evidence.npz",
+        "sha256": "802599a355c5da65934ba33714a35332829c781f7875fc5d420fac5217e7d041",
+        "fields": [
+          "mean",
+          "scale",
+          "weight"
+        ]
+      },
+      "I": {
+        "original": "code/runs/round120-question-interaction/fold1-question_both.npz",
+        "sha256": "8cbaa7795c46cb3bd9458f86605ac987c3e28e84b52927ea2ea74ba7f7b530ce",
+        "fields": [
+          "mean",
+          "scale",
+          "weight"
+        ]
+      },
+      "G": {
+        "original": "code/runs/round123-grounded-chain/fold1-round123_both_l0p01.npz",
+        "sha256": "c28c575d62827620774df1e4e900227e81045be2aa3e12ec342d047f9cc43d12",
+        "fields": [
+          "mean",
+          "scale",
+          "weight"
+        ]
+      }
+    },
+    "fold2": {
+      "A": {
+        "original": "code/runs/round108-group-subsets/fold-models/fold2-round108_subsets_l0p01/weights.npz",
+        "sha256": "8f82e24a36f1db2ae7593192ab64aff27a912ba95915089a34edec5d3c4e69a5",
+        "fields": [
+          "mean",
+          "scale",
+          "weight"
+        ]
+      },
+      "L": {
+        "original": "code/runs/round110-residual-ablation/outer2-final_evidence.npz",
+        "sha256": "90ee44085f9d0cd8c084a89c7fc8e3a1b34f01bfd93cd46917d2f482986c36b4",
+        "fields": [
+          "mean",
+          "scale",
+          "weight"
+        ]
+      },
+      "I": {
+        "original": "code/runs/round120-question-interaction/fold2-question_both.npz",
+        "sha256": "475015eacde2845d86e0cf92c02d61ccf5b4a1e40b603087146b5940f9599854",
+        "fields": [
+          "mean",
+          "scale",
+          "weight"
+        ]
+      },
+      "G": {
+        "original": "code/runs/round123-grounded-chain/fold2-round123_both_l0p01.npz",
+        "sha256": "68cb7d20c56dadacc85d49d4c65a4215780ad7f422e0f3b79600297c15656e88",
+        "fields": [
+          "mean",
+          "scale",
+          "weight"
+        ]
+      }
+    }
+  },
+  "inference_source_sha256": {
+    "method_round137_joint_retrain.py": "30e1945c79af9415cadb4fd8f84846ae18091854df0abca88f5e5c5ab638dd10",
+    "method_round123_grounded_chain.py": "eef68c8a36589398f1b3dc4a6d35abd2702a3d708507cfc30d15ed35d1691f2c",
+    "method_round120_question_interaction.py": "2692ce290fb440ff69038bfa7bf685a8ce0fb43f0be547f1347467c7c46869d0",
+    "method_round110_residual_ablation.py": "d78b5860fd4a690938be8f1caea6446bea2c1b7f9614fe85c154be2474c9da93",
+    "method_round109_arithmetic_residual.py": "778deb806bf9b9c5c7fd2e600ea9940b839c255aca58d04672ea03bedaf721c5",
+    "method_round108_group_subsets.py": "1dfd230664f0dcff844078028b49ffe76e225f8e33eddd024ce3693e4e3f46b0",
+    "common.py": "aecd10f7ff2e9e82ac5673d34d576e122caac51d2caaa7c7a8aa05906da51f6c",
+    "numeric_round7_v3.py": "4d5c08dea400ddc9b1ac33b7a58c699d94243e0ee611cc2064f9e6d79dd3b3e8",
+    "method_round11.py": "9b7a313f780e94d2ce79e5542e5d2fdf0045d1edb07bce717d3b6eeaebe33d8a",
+    "method_round7_gated.py": "f61b12e6ba73a198742b19e6a10f727946a8a3173140dcd2032555921f2761a6",
+    "method_round7_v3.py": "a872f363881091ddf9173078e6b36c41dbe0a4dcb07e7a2c60f3caa136f3b24c",
+    "method_round2.py": "c5d4c85b33eea843aa733c95836ee0b18b294ba1702cc3f36cdcdbe9afd73a4d",
+    "features.py": "4ae58271c7a298f39700a23e9caaa2adf9d381c8419d636119f44f8a069b24af",
+    "features_round4.py": "76823c77ae51538be19f1f578949448f715622011d1725ff8dc648273acedd36",
+    "method_round12_dependency.py": "137467338d44547513bc1b41bfb1a2d49190b53c89ed68a3cc5fab11421a2bdc"
+  },
+  "historical_source_sha256": {
+    "train_round137_joint_retrain.py": "4ebb0c0f5ccd4b19ada3325f93c8424ad2ae5fb97cf8d464c9e68e914edd30fb",
+    "method_round137_joint_retrain.py": "30e1945c79af9415cadb4fd8f84846ae18091854df0abca88f5e5c5ab638dd10",
+    "method_round123_grounded_chain.py": "eef68c8a36589398f1b3dc4a6d35abd2702a3d708507cfc30d15ed35d1691f2c",
+    "method_round120_question_interaction.py": "2692ce290fb440ff69038bfa7bf685a8ce0fb43f0be547f1347467c7c46869d0",
+    "method_round110_residual_ablation.py": "d78b5860fd4a690938be8f1caea6446bea2c1b7f9614fe85c154be2474c9da93",
+    "method_round109_arithmetic_residual.py": "778deb806bf9b9c5c7fd2e600ea9940b839c255aca58d04672ea03bedaf721c5",
+    "method_round108_group_subsets.py": "1dfd230664f0dcff844078028b49ffe76e225f8e33eddd024ce3693e4e3f46b0",
+    "common.py": "aecd10f7ff2e9e82ac5673d34d576e122caac51d2caaa7c7a8aa05906da51f6c",
+    "numeric_round7_v3.py": "4d5c08dea400ddc9b1ac33b7a58c699d94243e0ee611cc2064f9e6d79dd3b3e8",
+    "method_round11.py": "9b7a313f780e94d2ce79e5542e5d2fdf0045d1edb07bce717d3b6eeaebe33d8a",
+    "method_round7_gated.py": "f61b12e6ba73a198742b19e6a10f727946a8a3173140dcd2032555921f2761a6",
+    "method_round7_v3.py": "a872f363881091ddf9173078e6b36c41dbe0a4dcb07e7a2c60f3caa136f3b24c",
+    "method_round2.py": "c5d4c85b33eea843aa733c95836ee0b18b294ba1702cc3f36cdcdbe9afd73a4d",
+    "features.py": "4ae58271c7a298f39700a23e9caaa2adf9d381c8419d636119f44f8a069b24af",
+    "features_round4.py": "76823c77ae51538be19f1f578949448f715622011d1725ff8dc648273acedd36",
+    "method_round12_dependency.py": "137467338d44547513bc1b41bfb1a2d49190b53c89ed68a3cc5fab11421a2bdc",
+    "train_round121_regularization.py": "fdbd356ccc400522c6c01974def977f916b18ee966e09900b6dedf6de3b28aba",
+    "train_round120_question_interaction.py": "9e7a5593edf83f229c19c7a47c2280537d246c74e91490d609832f96d83b1b23",
+    "train_round109_arithmetic_residual.py": "faaa55a7790b88e0dafd42a38e5257b4ba1aaa483930e772b9987d56685081fe",
+    "train_round108_group_subsets.py": "440cf237ccbded482516bbea5184c873886328c1be7bbfbefab238129d1c85f8",
+    "train_round1.py": "cad7b1b25e413d64f81303370879b2bd1b3cd171758743bb60b4f78ac83bb8c4",
+    "audit_round137_joint_retrain.py": "cad7a1b1c24c55cbaf6f55532e6bdfa22a23af00f0986aede34494cc1c59198b",
+    "audit_round123_grounded_chain.py": "5a13320405e12e440d5f206c2b5a194690a5b87a30509e42f5cfe25b4db1ca9c",
+    "train_round123_grounded_chain.py": "61fe4fa636b80b77e01a8f4ed81f98f1f4f820e3709f2d378c64ba64ac222c1a",
+    "evaluate_round108_group_subsets.py": "a17af521e3a3d8ddc607a7256858c75d019dfb8a9054d8b10bc101123e0eaf8a",
+    "train_round110_residual_ablation.py": "b4c77f6d3d58be0d97d1c122f15801e0c583343cdb3eba021057efc2e6ecd09b"
+  },
+  "exact_extracted_functions": [
+    {
+      "original": "code/train_round109_arithmetic_residual.py",
+      "function": "loss",
+      "original_source_sha256": "faaa55a7790b88e0dafd42a38e5257b4ba1aaa483930e772b9987d56685081fe",
+      "exact_ast_copy": true
+    },
+    {
+      "original": "code/train_round109_arithmetic_residual.py",
+      "function": "fit_residual",
+      "original_source_sha256": "faaa55a7790b88e0dafd42a38e5257b4ba1aaa483930e772b9987d56685081fe",
+      "exact_ast_copy": true
+    },
+    {
+      "original": "code/train_round108_group_subsets.py",
+      "function": "metrics",
+      "original_source_sha256": "440cf237ccbded482516bbea5184c873886328c1be7bbfbefab238129d1c85f8",
+      "exact_ast_copy": true
+    },
+    {
+      "original": "code/train_round121_regularization.py",
+      "function": "comparison",
+      "original_source_sha256": "fdbd356ccc400522c6c01974def977f916b18ee966e09900b6dedf6de3b28aba",
+      "exact_ast_copy": true
+    },
+    {
+      "original": "code/train_round137_joint_retrain.py",
+      "function": "pair_design",
+      "original_source_sha256": "4ebb0c0f5ccd4b19ada3325f93c8424ad2ae5fb97cf8d464c9e68e914edd30fb",
+      "exact_ast_copy": true
+    },
+    {
+      "original": "code/train_round137_joint_retrain.py",
+      "function": "gradient_check",
+      "original_source_sha256": "4ebb0c0f5ccd4b19ada3325f93c8424ad2ae5fb97cf8d464c9e68e914edd30fb",
+      "exact_ast_copy": true
+    },
+    {
+      "original": "code/train_round137_joint_retrain.py",
+      "function": "contracts",
+      "original_source_sha256": "4ebb0c0f5ccd4b19ada3325f93c8424ad2ae5fb97cf8d464c9e68e914edd30fb",
+      "exact_ast_copy": true
+    }
+  ],
+  "package_versions": {
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "scikit-learn": "1.9.1",
+    "threadpoolctl": "3.7.0"
+  },
+  "python_version": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "new_fits": 0,
+  "new_predictions": 0,
+  "new_scores": 0,
+  "replay_input_sha256": {
+    "archive/source/audit_round123_grounded_chain.py": "5a13320405e12e440d5f206c2b5a194690a5b87a30509e42f5cfe25b4db1ca9c",
+    "archive/source/audit_round137_joint_retrain.py": "cad7a1b1c24c55cbaf6f55532e6bdfa22a23af00f0986aede34494cc1c59198b",
+    "archive/source/common.py": "aecd10f7ff2e9e82ac5673d34d576e122caac51d2caaa7c7a8aa05906da51f6c",
+    "archive/source/evaluate_round108_group_subsets.py": "a17af521e3a3d8ddc607a7256858c75d019dfb8a9054d8b10bc101123e0eaf8a",
+    "archive/source/features.py": "4ae58271c7a298f39700a23e9caaa2adf9d381c8419d636119f44f8a069b24af",
+    "archive/source/features_round4.py": "76823c77ae51538be19f1f578949448f715622011d1725ff8dc648273acedd36",
+    "archive/source/method_round108_group_subsets.py": "1dfd230664f0dcff844078028b49ffe76e225f8e33eddd024ce3693e4e3f46b0",
+    "archive/source/method_round109_arithmetic_residual.py": "778deb806bf9b9c5c7fd2e600ea9940b839c255aca58d04672ea03bedaf721c5",
+    "archive/source/method_round11.py": "9b7a313f780e94d2ce79e5542e5d2fdf0045d1edb07bce717d3b6eeaebe33d8a",
+    "archive/source/method_round110_residual_ablation.py": "d78b5860fd4a690938be8f1caea6446bea2c1b7f9614fe85c154be2474c9da93",
+    "archive/source/method_round120_question_interaction.py": "2692ce290fb440ff69038bfa7bf685a8ce0fb43f0be547f1347467c7c46869d0",
+    "archive/source/method_round123_grounded_chain.py": "eef68c8a36589398f1b3dc4a6d35abd2702a3d708507cfc30d15ed35d1691f2c",
+    "archive/source/method_round12_dependency.py": "137467338d44547513bc1b41bfb1a2d49190b53c89ed68a3cc5fab11421a2bdc",
+    "archive/source/method_round137_joint_retrain.py": "30e1945c79af9415cadb4fd8f84846ae18091854df0abca88f5e5c5ab638dd10",
+    "archive/source/method_round2.py": "c5d4c85b33eea843aa733c95836ee0b18b294ba1702cc3f36cdcdbe9afd73a4d",
+    "archive/source/method_round7_gated.py": "f61b12e6ba73a198742b19e6a10f727946a8a3173140dcd2032555921f2761a6",
+    "archive/source/method_round7_v3.py": "a872f363881091ddf9173078e6b36c41dbe0a4dcb07e7a2c60f3caa136f3b24c",
+    "archive/source/numeric_round7_v3.py": "4d5c08dea400ddc9b1ac33b7a58c699d94243e0ee611cc2064f9e6d79dd3b3e8",
+    "archive/source/train_round1.py": "cad7b1b25e413d64f81303370879b2bd1b3cd171758743bb60b4f78ac83bb8c4",
+    "archive/source/train_round108_group_subsets.py": "440cf237ccbded482516bbea5184c873886328c1be7bbfbefab238129d1c85f8",
+    "archive/source/train_round109_arithmetic_residual.py": "faaa55a7790b88e0dafd42a38e5257b4ba1aaa483930e772b9987d56685081fe",
+    "archive/source/train_round110_residual_ablation.py": "b4c77f6d3d58be0d97d1c122f15801e0c583343cdb3eba021057efc2e6ecd09b",
+    "archive/source/train_round120_question_interaction.py": "9e7a5593edf83f229c19c7a47c2280537d246c74e91490d609832f96d83b1b23",
+    "archive/source/train_round121_regularization.py": "fdbd356ccc400522c6c01974def977f916b18ee966e09900b6dedf6de3b28aba",
+    "archive/source/train_round123_grounded_chain.py": "61fe4fa636b80b77e01a8f4ed81f98f1f4f820e3709f2d378c64ba64ac222c1a",
+    "archive/source/train_round137_joint_retrain.py": "4ebb0c0f5ccd4b19ada3325f93c8424ad2ae5fb97cf8d464c9e68e914edd30fb",
+    "parents/fold0.npz": "51170bf4b51750bf561bd2e70205be66fd9c79a2566c510caa9ae4b92c6b55a1",
+    "parents/fold1.npz": "fe76cf13402038b694db9cb43c53cb7145239828e36ca9a0377e3383dab45709",
+    "parents/fold2.npz": "33bdde41647d059c5ff981a0349c9606590b8ad7f3ba42101d6a4b19bf768406",
+    "parents/folds.json": "63decfe02c761625152effd60dde1ab3be6b32b1ebf67e888a5630fefef32ee7",
+    "parents/full.npz": "a410fb64d203e6d009931030b80db3248044b5cc110e637ec5ad1516cc2ee665",
+    "parents/parent-oof-scores.npy": "1ce1d590d03149eb70cb7ffa849a0757282f7c0c3b7166005339976b17d59518",
+    "parents/train-data-manifest.json": "6cd8d552d2e1ad7326f51ed4a6661f1459a9160ca1b5098c5f8dc39ce49e9f1e",
+    "rebuild_parent_centers.py": "0f9c873054ed34abd252ee352aecd947794082b357eadedf5d71d7516975cba4",
+    "replay_round137.py": "e97ef03aef2e07812dfdd55f30fdbb02ce38592156be379d128ed6010c0f12ef",
+    "source/common.py": "aecd10f7ff2e9e82ac5673d34d576e122caac51d2caaa7c7a8aa05906da51f6c",
+    "source/features.py": "4ae58271c7a298f39700a23e9caaa2adf9d381c8419d636119f44f8a069b24af",
+    "source/features_round4.py": "76823c77ae51538be19f1f578949448f715622011d1725ff8dc648273acedd36",
+    "source/method_round108_group_subsets.py": "1dfd230664f0dcff844078028b49ffe76e225f8e33eddd024ce3693e4e3f46b0",
+    "source/method_round109_arithmetic_residual.py": "778deb806bf9b9c5c7fd2e600ea9940b839c255aca58d04672ea03bedaf721c5",
+    "source/method_round11.py": "9b7a313f780e94d2ce79e5542e5d2fdf0045d1edb07bce717d3b6eeaebe33d8a",
+    "source/method_round110_residual_ablation.py": "d78b5860fd4a690938be8f1caea6446bea2c1b7f9614fe85c154be2474c9da93",
+    "source/method_round120_question_interaction.py": "2692ce290fb440ff69038bfa7bf685a8ce0fb43f0be547f1347467c7c46869d0",
+    "source/method_round123_grounded_chain.py": "eef68c8a36589398f1b3dc4a6d35abd2702a3d708507cfc30d15ed35d1691f2c",
+    "source/method_round12_dependency.py": "137467338d44547513bc1b41bfb1a2d49190b53c89ed68a3cc5fab11421a2bdc",
+    "source/method_round137_joint_retrain.py": "30e1945c79af9415cadb4fd8f84846ae18091854df0abca88f5e5c5ab638dd10",
+    "source/method_round2.py": "c5d4c85b33eea843aa733c95836ee0b18b294ba1702cc3f36cdcdbe9afd73a4d",
+    "source/method_round7_gated.py": "f61b12e6ba73a198742b19e6a10f727946a8a3173140dcd2032555921f2761a6",
+    "source/method_round7_v3.py": "a872f363881091ddf9173078e6b36c41dbe0a4dcb07e7a2c60f3caa136f3b24c",
+    "source/numeric_round7_v3.py": "4d5c08dea400ddc9b1ac33b7a58c699d94243e0ee611cc2064f9e6d79dd3b3e8",
+    "source/replay_utils.py": "650841ece6b12f29cec8555a017b36a16b8b942a3a85c5122b64a264a76cafa8"
+  },
+  "optional_parent_rebuild_status": "authored_static_only_not_numerically_executed_after_freeze",
+  "primary_replay_status": "authored_static_only_not_executed_after_freeze",
+  "historical_source_directory": "archive/source"
+}
