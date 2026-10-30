@@ -3,7 +3,7 @@
 **Liang Zefeng · 3036798641**  
 Frozen model: **proximal joint ranker** · 30 October 2026
 
-[Report (PDF, 5 pages)](REPORT.pdf) · [Report source](REPORT.md) · [Frozen checkpoint ZIP](materials/frozen-model.zip) · [Training reproduction](training/TRAINING_REPRODUCE.md)
+[Report (PDF, 5 pages)](REPORT.pdf) · [Report source](REPORT.md) · [Training reproduction](training/TRAINING_REPRODUCE.md)
 
 The model compares equivalent-answer groups using fixed supplied embeddings, support, local numerical evidence, question interactions and final-calculation ancestry. A conservative proximal update jointly adjusts 5,180 ranking weights. Inference uses NumPy and the standard library, with no API calls or LLM generation.
 
@@ -53,7 +53,7 @@ python -X utf8 code/predict.py --method code/method_round137_joint_retrain.py --
 python -X utf8 code/score_predictions.py --split test --data-dir official-mp2/code/data --predictions evaluation/test-predictions.json --output evaluation/test-score.json
 ```
 
-Both `code/checkpoint/config.json` and `code/checkpoint/parameters.npz` are required. No old parent checkpoint, training array, cached prediction or ID lookup is used during inference. The checkpoint ZIP contains the identical inference source/assets and original freeze records; its older README describes the pre-publication state. Use this repository README for current installation and training instructions.
+Both `code/checkpoint/config.json` and `code/checkpoint/parameters.npz` are required. No old parent checkpoint, training array, cached prediction or ID lookup is used during inference. 
 
 ## 3. Reproduce training
 
@@ -80,10 +80,10 @@ This reference wrapper performs 25 fixed parent fits before the 20-fit replay. I
 | `REPORT.pdf`, `REPORT.md` | Final report and editable source |
 | `code/` | Frozen inference implementation and complete checkpoint |
 | `training/` | Training entries, saved parents and source provenance |
-| `materials/` | Evaluation helper, pinned dependencies, official scores, frozen ZIP, disclosures, licenses, integrity manifest and archived experiment records |
+| `materials/` | Evaluation helper, pinned dependencies, official scores, disclosures, licenses and integrity manifest |
 
-Final parameter SHA-256: `61ff97395a049186e4f2887043d9e1b0755414a0fe42e34a81bba1584010e8fa`. Config SHA-256: `041359516d344e57c53629a39aede6c30debb7d9aa97a2fdda690c8299b4fe41`. Original ZIP SHA-256: `05caf7efdf9efc872ec635bf02f8c39202d3648279a668deb693ef5cd0a5d95b`.
+Final parameter SHA-256: `61ff97395a049186e4f2887043d9e1b0755414a0fe42e34a81bba1584010e8fa`. Config SHA-256: `041359516d344e57c53629a39aede6c30debb7d9aa97a2fdda690c8299b4fe41`.
 
-Only `code/checkpoint/` is loaded as additional inference assets. The training parents, reports and research records are not inference dependencies. proximal joint-update experiment's original 20-fit worker took approximately 27.376 seconds; this excludes parent training, audits, evaluation and preceding searches. Historical costs are retained in `materials/research-records.zip`.
+Only `code/checkpoint/` is loaded as additional inference assets. Training parents and reports are not inference dependencies. The original 20-fit proximal joint-update worker took approximately 27.376 seconds; this excludes parent training, audits, evaluation and preceding searches.
 
 The submitted code version is the Git commit at the linked repository URL; use an immutable `tree/<commit>` link for final submission. Match it with the checkpoint directory or ZIP in that same commit. Any future documentation update must preserve this model's source/asset hashes.
