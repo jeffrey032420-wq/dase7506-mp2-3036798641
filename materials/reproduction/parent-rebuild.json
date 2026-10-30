@@ -1,0 +1,37 @@
+{
+  "result": {
+    "status": "completed_fixed_chain_from_data_rebuild",
+    "model_fits": 25,
+    "seconds": 19.853358200000002,
+    "threads_total": 4,
+    "validation_used": false,
+    "test_used": false,
+    "saved_parent_arrays_used_in_fit": false,
+    "fixed_selected_hyperparameters": true,
+    "all_historical_searches_repeated": false,
+    "comparisons": {
+      "fold0": {
+        "max_abs_difference": 0.0,
+        "allclose_rtol_1e_8_atol_1e_8": true
+      },
+      "fold1": {
+        "max_abs_difference": 0.0,
+        "allclose_rtol_1e_8_atol_1e_8": true
+      },
+      "fold2": {
+        "max_abs_difference": 0.0,
+        "allclose_rtol_1e_8_atol_1e_8": true
+      },
+      "full": {
+        "max_abs_difference": 0.0,
+        "allclose_rtol_1e_8_atol_1e_8": true
+      }
+    },
+    "parent_oof_allclose": true
+  },
+  "monitor": {
+    "exit_code": 0,
+    "wall_seconds": 27.627990500000124,
+    "hard_timeout_seconds": 600
+  }
+}

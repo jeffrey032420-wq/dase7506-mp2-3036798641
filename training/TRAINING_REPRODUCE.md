@@ -4,17 +4,17 @@ Author: Liang Zefeng, student ID 3036798641.
 
 ## Scope and verification status
 
-The submitted model is **proximal joint-update experiment joint, lambda 1**, a 5,180-weight proximal update of the fixed four-block grounded-chain control parent. The inference checkpoint is frozen. Preparing this release did **not** run training, prediction, or scoring, and did not alter the submitted weights.
+The submitted model is **proximal joint-update experiment joint, lambda 1**, a 5,180-weight proximal update of the fixed four-block grounded-chain control parent. The inference checkpoint is frozen. Numerical verification was completed on 30 October 2026 in the existing pinned local environment. The submitted weights were not overwritten. Both training routes reproduce the frozen parameter arrays exactly; the reconstructed model reproduces official validation and test scores. Evidence is in `../materials/reproduction/`.
 
 There are three different reproduction tasks:
 
 | Task | Entry and inputs | Status |
 |---|---|---|
 | Score the submitted frozen model without retraining | Repository inference instructions; `code/checkpoint/` | Uses the original frozen inference source and two-file checkpoint |
-| Repeat the 20-fit proximal joint-update experiment experiment from the exact saved train-only parent centers | `training/replay_round137.py`, official train data, included `training/parents/` | Primary training reproduction route; mathematical helpers are exact AST copies of original source. New portable wrapper was statically inspected, **not executed after freeze** |
-| Rebuild the fixed selected parent chain from train inputs, then repeat proximal joint-update experiment | Optional `training/rebuild_parent_centers.py`, followed by replay with `--parents-dir` | Authored reference implementation; **not numerically validated after freeze**. It does not repeat all historical searches |
+| Repeat the 20-fit proximal joint-update experiment experiment from the exact saved train-only parent centers | `training/replay_round137.py`, official train data, included `training/parents/` | Primary training reproduction route; mathematical helpers are exact AST copies of original source. Numerically verified: 20 fits, OOF 4,406/4,755, maximum frozen-array difference 0 |
+| Rebuild the fixed selected parent chain from train inputs, then repeat proximal joint-update experiment | Optional `training/rebuild_parent_centers.py`, followed by replay with `--parents-dir` | Numerically verified: 25 parent fits plus 20 replay fits, maximum frozen-array difference 0; it does not repeat all historical searches |
 
-Do not describe the saved-parent replay as training every historical component from scratch. The numerical checks in archived original records describe the original experiments, not a fresh execution of these release wrappers.
+Do not describe the saved-parent replay as training every historical component from scratch. The archived original records describe the original experiments; the separate `materials/reproduction/` records describe the fresh wrapper executions.
 
 ## Installation
 
@@ -75,7 +75,7 @@ training/runs/reproduction/round137/
     round137_joint_l1p0/{config.json, parameters.npz}
 ```
 
-The displayed candidate names are the **original expected selection**, not a post-freeze rerun result. A platform/library difference can alter the optimizer or selection; inspect the saved six-configuration table and convergence records. Compare arrays with tolerance rather than assuming a serialized NPZ SHA must match across versions. No official validation/test evaluation is automatically launched by this training script.
+The displayed candidate names were confirmed by the fresh replay. A platform/library difference can alter the optimizer or selection; inspect the saved six-configuration table and convergence records. Compare arrays with tolerance rather than assuming a serialized NPZ SHA must match across versions. No official validation/test evaluation is automatically launched by this training script.
 
 ## What is repeated
 
@@ -116,7 +116,7 @@ These are development metrics after selecting hyperparameters on those OOF resul
 
 ## Optional from-data reconstruction of the fixed parent chain
 
-This is an **unexecuted after-freeze reference wrapper**. It reconstructs the fixed chosen chain from the official training data, without using saved learned parent arrays in fitting. Comparisons to the saved centers are made only after the 25 fits. It stops if the arrays/OOF do not agree within `1e-8` and preserves the comparison report. Do not cite it as a numerically verified clean-room rerun.
+This wrapper was **numerically executed and verified on 30 October 2026**. It reconstructs the fixed chosen chain from the official training data, without using saved learned parent arrays in fitting. Comparisons to the saved centers are made only after the 25 fits. It stops if the arrays/OOF do not agree within `1e-8` and preserves the comparison report. This is verification in the existing pinned environment; a newly provisioned clean environment was not used.
 
 **Tolerance distinction:** the optional rebuild's array and OOF comparison uses `rtol=atol=1e-8`. The proximal joint-update experiment replay preserves the original, stricter held-parent score check of `rtol=atol=1e-10`, including when a rebuilt bundle is supplied. Passing the rebuild's `1e-8` check therefore does not guarantee that replay will accept its held scores at `1e-10`. If the latter check fails, replay stops before fitting the affected fold and preserves any earlier completed fold records; report the discrepancy rather than describing it as successful reproduction. The exact saved-parent route retains the original `1e-10` check unchanged.
 
@@ -147,4 +147,4 @@ For inspecting original entry points in their original relative layout, copy `ar
 
 Both portable entries cap numerical libraries at **four total CPU threads** and use a **600-second worker timeout**. The assignment's 16 MiB / 30-second constraints concern the frozen inference assets and complete official prediction-plus-scoring run; training logs and parents are not runtime dependencies.
 
-The user chose the final joint family after observing test scores. The original within-family lambda selection was train OOF; the final human family choice was test-informed. The report distinguishes training-only parameter selection from final model selection.
+The user chose the final joint family after observing test scores. The original within-family lambda selection was train OOF; the final human family choice was test-informed. The original experiment records preserve this distinction.

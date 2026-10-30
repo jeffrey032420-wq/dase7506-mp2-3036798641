@@ -6,6 +6,18 @@
       "bytes": 76,
       "sha256": "e3172122809f292486c48b365e00cf6f85d531f0f02671718f4dc07a088416df"
     },
+    "README.md": {
+      "bytes": 7230,
+      "sha256": "984881f660f5be86abf13634a438f9e5b44aa9f7f1e8771d63ab2d80c992ce8b"
+    },
+    "REPORT.md": {
+      "bytes": 17073,
+      "sha256": "1f07baf10c17625f1b433fdf9de14163246fbc3e61449e36da727c3e65d084d9"
+    },
+    "REPORT.pdf": {
+      "bytes": 108728,
+      "sha256": "c8642d3ee28c5b624ce3389196bd81aa8cd02e6e844b762b78e49540e6cc2872"
+    },
     "code/check_data.py": {
       "bytes": 1288,
       "sha256": "32f203e156e3019f87bb038ade4f303da21ca2f1694bb678a3ddc44661f0b533"
@@ -98,18 +110,6 @@
       "bytes": 3868,
       "sha256": "5e48aa68be64e37bd31468c952d0bef214aa945604dd104c27ba712a54abefde"
     },
-    "materials/build_report.py": {
-      "bytes": 8224,
-      "sha256": "41faf744096f5374f5f14ba3ae70601b3a133e97766a289ede024cdaa0d25dfc"
-    },
-    "materials/evaluate_frozen.py": {
-      "bytes": 3400,
-      "sha256": "0ba1a3aa4e9d1ffc5cf7d4bb83c05e9dced2d698345d9cb59bebaa58eb2b5715"
-    },
-    "materials/frozen-model.zip": {
-      "bytes": 100549,
-      "sha256": "05caf7efdf9efc872ec635bf02f8c39202d3648279a668deb693ef5cd0a5d95b"
-    },
     "materials/LICENSE.txt": {
       "bytes": 1062,
       "sha256": "86bbb73e855821d7c401912fd4bf82e34313e6e3b6fd6f909f2b6cc9e209a53b"
@@ -117,6 +117,34 @@
     "materials/NOTICE.txt": {
       "bytes": 1066,
       "sha256": "d577cdf7202ae22f2b19ace348b0ec69958a59aaf51d30cdab902bf7c1e67d78"
+    },
+    "materials/build_report.py": {
+      "bytes": 8224,
+      "sha256": "41faf744096f5374f5f14ba3ae70601b3a133e97766a289ede024cdaa0d25dfc"
+    },
+    "materials/evaluate_frozen.py": {
+      "bytes": 3479,
+      "sha256": "eaea5e5dca16db7556e9d589c63d6cd0fffbb3705bf8c809e7a3693b8def203f"
+    },
+    "materials/frozen-model.zip": {
+      "bytes": 100549,
+      "sha256": "05caf7efdf9efc872ec635bf02f8c39202d3648279a668deb693ef5cd0a5d95b"
+    },
+    "materials/reproduction/parent-rebuild.json": {
+      "bytes": 982,
+      "sha256": "aa25f6f1d1176fce2f96ab2242b7f571f59da7f81f841a5909fab1efa00aad6e"
+    },
+    "materials/reproduction/rebuilt-parent-replay.json": {
+      "bytes": 28188,
+      "sha256": "2016fa1472efb16fc2c0a7bf23d58dbcc197fec6dacd07585c1bb53b28beec6a"
+    },
+    "materials/reproduction/saved-parent-replay.json": {
+      "bytes": 28190,
+      "sha256": "3d962e62350a6316a03e0c6acb37fbf59bb9d076a52d94e7a66ee848b9df32c7"
+    },
+    "materials/reproduction/summary.json": {
+      "bytes": 2218,
+      "sha256": "cee416a32341cd9b1c5287b6ddfe7d7f702683decd0e3cf6e1855332f1f5afe1"
     },
     "materials/requirements-inference.txt": {
       "bytes": 14,
@@ -142,17 +170,13 @@
       "bytes": 193,
       "sha256": "839d5c3445a4c116fda95470a73f98a8c80053f9f62e032ea15886934e52fa3a"
     },
-    "README.md": {
-      "bytes": 7024,
-      "sha256": "25d8eb6a34e7fe873a6e546134a78e205047d1b96a674f5d5c6b05113124889e"
+    "training/SUMMARY.md": {
+      "bytes": 2253,
+      "sha256": "f1b15a93aad81c93501498c685c1e792ad29f55c48802991cc6ca9c6971fa95b"
     },
-    "REPORT.md": {
-      "bytes": 16420,
-      "sha256": "097112facd9367f41c663780ce2a0517aa41c23e76d70a32f78e71a7aa07978a"
-    },
-    "REPORT.pdf": {
-      "bytes": 108384,
-      "sha256": "2ce33c6c24a0769668897a7d9da685acb48dc8e158de9d2b43923b82ad6a5a26"
+    "training/TRAINING_REPRODUCE.md": {
+      "bytes": 13060,
+      "sha256": "27e0428b55ac91d3cf1ddcf0c7c0e07c4900c02eae7684e523f1803ddcf2486c"
     },
     "training/archive/requirements.txt": {
       "bytes": 72,
@@ -409,14 +433,6 @@
     "training/source/replay_utils.py": {
       "bytes": 6607,
       "sha256": "650841ece6b12f29cec8555a017b36a16b8b942a3a85c5122b64a264a76cafa8"
-    },
-    "training/SUMMARY.md": {
-      "bytes": 2138,
-      "sha256": "a14bd229d7038d3829e1cdaff6bdfca92b4dd93f9939b3565979ef6cc3797680"
-    },
-    "training/TRAINING_REPRODUCE.md": {
-      "bytes": 12809,
-      "sha256": "b194ab432e2d19b290d976093eb6f36e0f151beb2e64d8e86ef481de0a1a5ffb"
     }
   }
 }

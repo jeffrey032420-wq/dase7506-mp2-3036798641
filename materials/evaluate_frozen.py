@@ -1,6 +1,6 @@
 """Run two unchanged official processes with a shared 30-second CPU budget.
 
-This convenience entry was authored for publication, not executed after freeze.
+This convenience entry checks checkpoint integrity and enforces the local budget.
 """
 import argparse
 import hashlib

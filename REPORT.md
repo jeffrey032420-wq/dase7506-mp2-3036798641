@@ -28,8 +28,6 @@ Two families and three penalties were fixed before fitting. Six configurations r
 
 Both candidates and the control received validation. The development comparison retained the grounded-chain control; the two new candidates were frozen together and each evaluated once on test. This batch involved no test-case analysis or test-driven parameter changes.
 
-Test aggregate scores were consulted in final model selection; the reported test accuracy is therefore descriptive performance on this bank, rather than an independent estimate.
-
 ## 3. Answer-group selector
 
 ### 3.1 Grouping and base representation
@@ -142,11 +140,11 @@ Repairs, new errors, folds and strata must be examined together. Larger models a
 
 Local execution used Windows, **Intel Core i5-11400H @ 2.70 GHz**, Python 3.12.14 and NumPy 2.5.3. Training uses SciPy 1.18.1, scikit-learn 1.9.1 and threadpoolctl 3.7.0; historical neural experiments used PyTorch 2.14.1+cpu. Final inference requires NumPy/standard library only. Numerical workloads were serialized with four threads.
 
-The final checkpoint includes all learned weights, transformations/statistics and configuration: **62,449 uncompressed bytes**, approximately 0.0596 MiB against the 16 MiB limit. It independently exports the four blocks; old parent checkpoints are unnecessary for inference. A fresh complete official test prediction process followed by a separate scoring process took **2.3314972 seconds**, including startup, imports, loading and preprocessing. This is below 30 seconds locally. Timing on the required **Xeon Platinum 8457C** has not been measured.
+The final checkpoint includes all learned weights, transformations/statistics and configuration: **62,449 uncompressed bytes**, approximately 0.0596 MiB against the 16 MiB limit. It independently exports the four blocks; old parent checkpoints are unnecessary for inference. A fresh complete official test prediction process followed by a separate scoring process took **2.3314972 seconds**, including startup, imports, loading and preprocessing. This is below 30 seconds locally. A fresh frozen-model reproduction took 2.169209 seconds locally; the reconstructed model took 2.900080 seconds on test. The **Xeon Platinum 8457C** is the official reference for the runtime limit; these measurements are local.
 
-The joint-update comparison's 20 fits took **27.376 seconds** in its training worker; audit, evaluation, parent construction and previous searches are additional costs, not included in that number. The repository appendix retains their separate records rather than claiming an end-to-end project training time.
+The joint-update comparison's 20 fits took **27.376 seconds** in its training worker; audit, evaluation, parent construction and previous searches are additional costs, not included in that number. The new saved-parent replay worker took 33.748 seconds; fixed-chain parent reconstruction and its replay workers took 19.853 and 35.383 seconds. Including process startup, the latter two stages took 65.177 seconds combined. These are training costs; the 30-second limit applies to inference plus scoring. The repository appendix retains separate historical costs.
 
-The repository provides exact installation/evaluation commands, training-only full/fold parent centers for final-stage training replay, and historical training sources. This supports final-stage replay; it does not claim one-command reconstruction of the entire historical search. Prediction uses `method_round137_joint_retrain.py`, the frozen checkpoint and independent `score_predictions.py`. Hashes, seeds and official JSON accompany the artifact. Parameter-file SHA-256: `61ff97395a049186e4f2887043d9e1b0755414a0fe42e34a81bba1584010e8fa`.
+The repository provides exact installation/evaluation commands, training-only full/fold parent centers for final-stage training replay, and historical training sources. Fresh numerical reproduction on 30 October verified the 20-fit saved-parent replay and the 45-fit fixed-chain reconstruction from official training inputs. Both reproduce the frozen parameter arrays exactly (maximum absolute difference 0) and OOF 4,406/4,755. The reconstructed model reproduces validation 752/798 and test 395/467. This verifies the fixed chosen recipe in the existing pinned environment, not the entire historical search or a newly provisioned clean environment. Machine-readable evidence is in materials/reproduction/. Prediction uses `method_round137_joint_retrain.py`, the frozen checkpoint and independent `score_predictions.py`. Hashes, seeds and official JSON accompany the artifact. Parameter-file SHA-256: `61ff97395a049186e4f2887043d9e1b0755414a0fe42e34a81bba1584010e8fa`.
 
 ## 7. Limitations and conclusion
 

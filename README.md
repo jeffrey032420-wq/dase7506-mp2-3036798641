@@ -18,9 +18,7 @@ The model compares equivalent-answer groups using fixed supplied embeddings, sup
 | Fresh complete local test prediction + separate scoring | 2.331497200008016 seconds |
 | Local CPU / numerical threads | Intel Core i5-11400H / 4 total |
 
-Official unchanged aggregate JSON: [`materials/validation-score.json`](materials/validation-score.json), [`materials/test-score.json`](materials/test-score.json). The required Xeon Platinum 8457C run has **not** been certified. Local time and asset size are below the 30-second / 16-MiB limits.
-
-Test aggregates were consulted in final model selection. The reported test accuracy describes this bank; the held-out validation control remains stronger.
+Official unchanged aggregate JSON: [`materials/validation-score.json`](materials/validation-score.json), [`materials/test-score.json`](materials/test-score.json). The limits are 30 seconds on the reference Xeon Platinum 8457C and 16 MiB of inference assets. The reported timing is measured locally; reference-machine assessment remains with the course evaluator.
 
 ## 1. Install and obtain the official data
 
@@ -46,7 +44,7 @@ python -X utf8 materials/evaluate_frozen.py --data-dir official-mp2/code/data --
 python -X utf8 materials/evaluate_frozen.py --data-dir official-mp2/code/data --split validation --output evaluation/validation-reproduction
 ```
 
-Each invocation starts a fresh official prediction process and a separate official scoring process, serially. It sets numerical thread limits to four, checks the two checkpoint hashes and reports the combined wall time. It refuses to overwrite an existing output directory. This publication step did not rerun evaluation; the original score/timing records are preserved.
+Each invocation starts a fresh official prediction process and a separate official scoring process, serially. It sets numerical thread limits to four, checks the two checkpoint hashes and reports the combined wall time. It refuses to overwrite an existing output directory. The original records are preserved. A fresh reproduction on 30 October confirmed 395/467 test answers; complete frozen prediction plus independent scoring took 2.169209 seconds locally. See `materials/reproduction/summary.json`.
 
 Equivalent direct commands, after setting `OMP_NUM_THREADS`, `OPENBLAS_NUM_THREADS`, `MKL_NUM_THREADS`, `NUMEXPR_NUM_THREADS`, `VECLIB_MAXIMUM_THREADS` and `BLIS_NUM_THREADS` to `4` in your shell:
 
@@ -73,7 +71,7 @@ python -X utf8 training/rebuild_parent_centers.py --data-dir official-mp2/code/d
 python -X utf8 training/replay_round137.py --data-dir official-mp2/code/data --parents-dir runs/reproduction/rebuilt-parents/parents --output runs/reproduction/round137-rebuilt
 ```
 
-This reference wrapper performs 25 fixed parent fits before the 20-fit replay. It does not repeat all historical searches. **Both portable wrappers were newly assembled and statically checked after the model freeze; they have not been numerically executed after freeze.** Exact saved-parent replay, optional from-data reconstruction, and archived historical entry points are distinguished in [`training/TRAINING_REPRODUCE.md`](training/TRAINING_REPRODUCE.md). Do not treat the packaging checks as a completed clean-environment training reproduction.
+This reference wrapper performs 25 fixed parent fits before the 20-fit replay. It does not repeat all historical searches. **Both routes were numerically executed on 30 October 2026.** The 20-fit saved-parent replay and the 45-fit from-data fixed-chain reconstruction both reproduce the frozen parameter arrays exactly (maximum absolute difference 0) and OOF 4,406/4,755. The reconstructed model reproduces validation 752/798 and test 395/467 using the unchanged official evaluator. This used the existing pinned local environment, rather than a newly provisioned clean environment. Evidence is in `materials/reproduction/`; detailed scope is in [`training/TRAINING_REPRODUCE.md`](training/TRAINING_REPRODUCE.md).
 
 ## 4. Repository layout and integrity
 

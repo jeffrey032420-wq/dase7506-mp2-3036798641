@@ -1,0 +1,73 @@
+{
+  "date": "2026-10-30",
+  "threads_total": 4,
+  "reference_xeon_8457c_measured": false,
+  "frozen_checkpoint_overwritten": false,
+  "runs": {
+    "saved-parent-replay": {
+      "model_fits": 20,
+      "worker_seconds": 33.748280499999964,
+      "wall_seconds": 40.19231810000019,
+      "oof_correct": 4406,
+      "parameter_max_abs_difference": 0.0
+    },
+    "parent-rebuild": {
+      "model_fits": 25,
+      "worker_seconds": 19.853358200000002,
+      "wall_seconds": 27.627990500000124
+    },
+    "rebuilt-parent-replay": {
+      "model_fits": 20,
+      "worker_seconds": 35.3825068000001,
+      "wall_seconds": 37.548512700000174,
+      "oof_correct": 4406,
+      "parameter_max_abs_difference": 0.0
+    }
+  },
+  "evaluations": [
+    {
+      "checkpoint": "reconstructed",
+      "split": "test",
+      "official_score": {
+        "protocol": "dase7506-mp2-open-hard-verifier-v5",
+        "split": "test",
+        "correct": 395,
+        "n": 467,
+        "accuracy": 84.58244111349036,
+        "scoring_seconds": 0.09558270000025004
+      },
+      "complete_prediction_plus_scoring_seconds": 2.900079900000037
+    },
+    {
+      "checkpoint": "reconstructed",
+      "split": "validation",
+      "official_score": {
+        "protocol": "dase7506-mp2-open-hard-verifier-v5",
+        "split": "validation",
+        "correct": 752,
+        "n": 798,
+        "accuracy": 94.23558897243107,
+        "scoring_seconds": 0.11771959999987303
+      },
+      "complete_prediction_plus_scoring_seconds": 3.005909999999858
+    },
+    {
+      "checkpoint": "frozen",
+      "split": "test",
+      "official_score": {
+        "protocol": "dase7506-mp2-open-hard-verifier-v5",
+        "split": "test",
+        "correct": 395,
+        "n": 467,
+        "accuracy": 84.58244111349036,
+        "scoring_seconds": 0.03412109999999302
+      },
+      "complete_prediction_plus_scoring_seconds": 2.1692089999996824
+    }
+  ],
+  "inference_assets_bytes": 62449,
+  "frozen_sha256": {
+    "config.json": "041359516d344e57c53629a39aede6c30debb7d9aa97a2fdda690c8299b4fe41",
+    "parameters.npz": "61ff97395a049186e4f2887043d9e1b0755414a0fe42e34a81bba1584010e8fa"
+  }
+}
