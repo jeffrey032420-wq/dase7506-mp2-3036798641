@@ -20,6 +20,8 @@ The model compares equivalent-answer groups using fixed supplied embeddings, sup
 
 Official unchanged aggregate JSON: [`materials/validation-score.json`](materials/validation-score.json), [`materials/test-score.json`](materials/test-score.json). The limits are 30 seconds on the reference Xeon Platinum 8457C and 16 MiB of inference assets. The reported timing is measured locally; reference-machine assessment remains with the course evaluator.
 
+The final submitted model was frozen before test evaluation. No model, component, weight or threshold was changed in response to its test result. Earlier test aggregates were known during subsequent development, so the test set was not a fully untouched holdout.
+
 ## 1. Install and obtain the official data
 
 Original environment: Python 3.12.14, NumPy 2.5.3. From this repository root:
