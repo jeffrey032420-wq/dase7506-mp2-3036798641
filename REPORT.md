@@ -26,7 +26,7 @@ These folds stratify by correct-candidate count with seed **20261029**. A questi
 
 Two families and three penalties were fixed before fitting. Six configurations received three outer fits; one winner per family received a full-training fit: **20 fits**. Selection used OOF correctness, then fewer new errors, fewer changed choices and larger regularization. Selected OOF accuracy is a development metric, not nested confirmation.
 
-Both candidates and the control received validation. The development comparison retained the grounded-chain control; the two new candidates were frozen together and each evaluated once on test. This batch involved no test-case analysis or test-driven parameter changes.
+Both candidates and the control received validation. The development comparison retained the grounded-chain control; the two new candidates were frozen together and each evaluated once on test. Earlier test aggregates were known during subsequent development. The available records do not establish whether the final submission choice among the control and two new candidates was fixed before their test scores were reviewed. No test-case analysis or test-driven parameter changes were made. The test results are therefore descriptive and not an independent holdout estimate for final model selection.
 
 ## 3. Answer-group selector
 
@@ -152,7 +152,7 @@ A separate unseen audit bank is needed to assess generalization; no statistical 
 
 The final update also retains an adaptively developed parent and its scaling geometry. Same-fit parent margins used in updating are optimistic within training, despite properly excluded outer-held questions. The final method did not rebuild a fully nested parent-selection procedure. Comparisons of different feature blocks, penalties and architectures consequently have the stated local scope. Bounded parsers miss unsupported expressions and cannot resolve full entity, unit or temporal semantics. Correct final-answer selection is a narrower outcome than reliable reasoning.
 
-The frozen artifact reproduces **395/467** on the official test bank within a small local resource budget. Answer-group ranking, soft numerical evidence and conservative joint adjustment form a compact implementation. The experiments' strongest methodological finding is the need to preserve correct decisions while adding evidence: many plausible changes merely exchanged errors. The final test improvement and validation regression are both retained in the comparison.
+The frozen artifact reproduces **395/467** on the official test bank within a small local resource budget. Answer-group ranking, soft numerical evidence and conservative joint adjustment form a compact implementation. The experiments' strongest methodological finding is the need to preserve correct decisions while adding evidence: many plausible changes merely exchanged errors. The observed test comparison is reported alongside the validation results but is descriptive, not an independent holdout estimate: earlier test aggregates were known during development, and the final submission choice relative to the candidates is not time-stamped in the available records.
 
 ## 8. AI assistance
 

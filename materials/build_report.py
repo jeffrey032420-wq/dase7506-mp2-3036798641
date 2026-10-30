@@ -83,7 +83,7 @@ def main():
     lines = text.splitlines()
     story = []
     i = 0
-    page_starts = ("## 3.", "## 4.", "### 4.3", "## 6.")
+    page_starts = ("## 3.", "## 4.", "## 6.")
     while i < len(lines):
         line = lines[i].strip()
         if not line:
