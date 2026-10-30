@@ -7,8 +7,8 @@
       "sha256": "e3172122809f292486c48b365e00cf6f85d531f0f02671718f4dc07a088416df"
     },
     "README.md": {
-      "bytes": 6719,
-      "sha256": "459353f613ac65b4f104b1669b687f5fe1678f6f7991d437c5d61ed444f85db8"
+      "bytes": 6704,
+      "sha256": "Warning: cryptoMod was declared with const; use let for reassignable variables.\na39e5aaa9c24fcf34909797e04390c03849b40f917436ccc57ff93469dfb4533"
     },
     "REPORT.md": {
       "bytes": 17073,
