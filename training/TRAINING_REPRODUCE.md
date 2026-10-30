@@ -14,7 +14,7 @@ There are three different reproduction tasks:
 | Repeat the 20-fit proximal joint-update experiment experiment from the exact saved train-only parent centers | `training/replay_round137.py`, official train data, included `training/parents/` | Primary training reproduction route; mathematical helpers are exact AST copies of original source. Numerically verified: 20 fits, OOF 4,406/4,755, maximum frozen-array difference 0 |
 | Rebuild the fixed selected parent chain from train inputs, then repeat proximal joint-update experiment | Optional `training/rebuild_parent_centers.py`, followed by replay with `--parents-dir` | Numerically verified: 25 parent fits plus 20 replay fits, maximum frozen-array difference 0; it does not repeat all historical searches |
 
-Do not describe the saved-parent replay as training every historical component from scratch. The archived original records describe the original experiments; the separate `materials/reproduction/` records describe the fresh wrapper executions.
+Do not describe the saved-parent replay as training every historical component from scratch. Original selected experiment sources and provenance are retained under `training/archive/` and `training/provenance/`; fresh wrapper execution evidence is in `materials/reproduction/`.
 
 ## Installation
 
@@ -137,11 +137,9 @@ It regenerates fixed folds, fits all scalers on their appropriate training indic
 
 ## Archived original sources and provenance
 
-Historical plan documents are bundled in `materials/research-records.zip`, under `training/archive/plans/`. Extract those before following the original-layout inspection instructions below.
-
 `archive/source/` contains the complete local Python import closure (26 files) rooted at the original subset-augmented group anchor/109/110/120/123/137 training and relevant audit entries. These are preserved for inspection, with original SHA-256s in `provenance/manifest.json`. `source/` holds the 15-file inference feature closure and the exact copied replay math helpers. Code duplication preserves old source bytes and is intentional.
 
-For inspecting original entry points in their original relative layout, copy `archive/source/*.py` into a **separate research workspace `code/`**, copy `archive/plans/` into that workspace's parent, and obtain official `code/data/`. Do not overwrite this release's frozen inference files. The old entry points still expect historical `runs/...` metadata, feature caches, parent artifacts, and hash manifests; **merely copying the files is not a turnkey historical rerun**. The portable replay and optional fixed-chain reconstruction avoid those historical path requirements.
+For inspecting original entry points in their original relative layout, copy `archive/source/*.py` into a **separate research workspace `code/`**, and obtain official `code/data/`. Do not overwrite this release's frozen inference files. The old entry points still expect historical `runs/...` metadata, feature caches, parent artifacts, and hash manifests; **merely copying the files is not a turnkey historical rerun**. The portable replay and optional fixed-chain reconstruction avoid those historical path requirements.
 
 `provenance/manifest.json` identifies the four original A/L/I/G source artifacts for each full/fold center, their original repository-relative paths and hashes, and the saved-center hashes. Published center sizes plus fixed folds and parent OOF total **583,695 bytes**. These are **training-only artifacts**. At inference, `method_round137_joint_retrain.py` reads only `config.json` and `parameters.npz` from the submitted checkpoint; parent artifacts, OOF arrays, and training code are not loaded.
 
