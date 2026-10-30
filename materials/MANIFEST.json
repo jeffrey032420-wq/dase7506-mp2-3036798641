@@ -1,0 +1,422 @@
+{
+  "model": "proximal joint ranker",
+  "report_pages": 5,
+  "files": {
+    ".gitignore": {
+      "bytes": 76,
+      "sha256": "e3172122809f292486c48b365e00cf6f85d531f0f02671718f4dc07a088416df"
+    },
+    "code/check_data.py": {
+      "bytes": 1288,
+      "sha256": "32f203e156e3019f87bb038ade4f303da21ca2f1694bb678a3ddc44661f0b533"
+    },
+    "code/checkpoint/config.json": {
+      "bytes": 179,
+      "sha256": "041359516d344e57c53629a39aede6c30debb7d9aa97a2fdda690c8299b4fe41"
+    },
+    "code/checkpoint/parameters.npz": {
+      "bytes": 62270,
+      "sha256": "61ff97395a049186e4f2887043d9e1b0755414a0fe42e34a81bba1584010e8fa"
+    },
+    "code/common.py": {
+      "bytes": 4192,
+      "sha256": "aecd10f7ff2e9e82ac5673d34d576e122caac51d2caaa7c7a8aa05906da51f6c"
+    },
+    "code/features.py": {
+      "bytes": 2049,
+      "sha256": "4ae58271c7a298f39700a23e9caaa2adf9d381c8419d636119f44f8a069b24af"
+    },
+    "code/features_round4.py": {
+      "bytes": 6684,
+      "sha256": "76823c77ae51538be19f1f578949448f715622011d1725ff8dc648273acedd36"
+    },
+    "code/method_round108_group_subsets.py": {
+      "bytes": 4255,
+      "sha256": "1dfd230664f0dcff844078028b49ffe76e225f8e33eddd024ce3693e4e3f46b0"
+    },
+    "code/method_round109_arithmetic_residual.py": {
+      "bytes": 2715,
+      "sha256": "778deb806bf9b9c5c7fd2e600ea9940b839c255aca58d04672ea03bedaf721c5"
+    },
+    "code/method_round11.py": {
+      "bytes": 2422,
+      "sha256": "9b7a313f780e94d2ce79e5542e5d2fdf0045d1edb07bce717d3b6eeaebe33d8a"
+    },
+    "code/method_round110_residual_ablation.py": {
+      "bytes": 2530,
+      "sha256": "d78b5860fd4a690938be8f1caea6446bea2c1b7f9614fe85c154be2474c9da93"
+    },
+    "code/method_round120_question_interaction.py": {
+      "bytes": 3676,
+      "sha256": "2692ce290fb440ff69038bfa7bf685a8ce0fb43f0be547f1347467c7c46869d0"
+    },
+    "code/method_round123_grounded_chain.py": {
+      "bytes": 7255,
+      "sha256": "eef68c8a36589398f1b3dc4a6d35abd2702a3d708507cfc30d15ed35d1691f2c"
+    },
+    "code/method_round12_dependency.py": {
+      "bytes": 5049,
+      "sha256": "137467338d44547513bc1b41bfb1a2d49190b53c89ed68a3cc5fab11421a2bdc"
+    },
+    "code/method_round137_joint_retrain.py": {
+      "bytes": 3116,
+      "sha256": "30e1945c79af9415cadb4fd8f84846ae18091854df0abca88f5e5c5ab638dd10"
+    },
+    "code/method_round2.py": {
+      "bytes": 1381,
+      "sha256": "c5d4c85b33eea843aa733c95836ee0b18b294ba1702cc3f36cdcdbe9afd73a4d"
+    },
+    "code/method_round7_gated.py": {
+      "bytes": 1118,
+      "sha256": "f61b12e6ba73a198742b19e6a10f727946a8a3173140dcd2032555921f2761a6"
+    },
+    "code/method_round7_v3.py": {
+      "bytes": 2525,
+      "sha256": "a872f363881091ddf9173078e6b36c41dbe0a4dcb07e7a2c60f3caa136f3b24c"
+    },
+    "code/numeric_round7_v3.py": {
+      "bytes": 5417,
+      "sha256": "4d5c08dea400ddc9b1ac33b7a58c699d94243e0ee611cc2064f9e6d79dd3b3e8"
+    },
+    "code/predict.py": {
+      "bytes": 1680,
+      "sha256": "e7a627fbdc9ef8d4ab3189a6fa5ac02d56ae703ccd1a81507aea0bd66e042162"
+    },
+    "code/requirements.txt": {
+      "bytes": 13,
+      "sha256": "5c12d85e7c08038d1dd9ffbf8119d12ce808885230a47e2bf65dcd9f114659d5"
+    },
+    "code/score_predictions.py": {
+      "bytes": 1283,
+      "sha256": "fe12b809b82117aea722e5dfef7a55a88950a7cf50c49ec2ea007ea847959960"
+    },
+    "materials/AI_DISCLOSURE.md": {
+      "bytes": 1619,
+      "sha256": "39c8c7ecc5aea65e409e22eac1f6c9d60301db1297d01c1102d411c0bcc29118"
+    },
+    "materials/ATTRIBUTION.md": {
+      "bytes": 3868,
+      "sha256": "5e48aa68be64e37bd31468c952d0bef214aa945604dd104c27ba712a54abefde"
+    },
+    "materials/build_report.py": {
+      "bytes": 8248,
+      "sha256": "bbdde5fbdd6729847e4d6a3422cb65305255f9ff06fd82b48d2f31e67b4add61"
+    },
+    "materials/evaluate_frozen.py": {
+      "bytes": 3400,
+      "sha256": "0ba1a3aa4e9d1ffc5cf7d4bb83c05e9dced2d698345d9cb59bebaa58eb2b5715"
+    },
+    "materials/frozen-model.zip": {
+      "bytes": 100549,
+      "sha256": "05caf7efdf9efc872ec635bf02f8c39202d3648279a668deb693ef5cd0a5d95b"
+    },
+    "materials/LICENSE.txt": {
+      "bytes": 1062,
+      "sha256": "86bbb73e855821d7c401912fd4bf82e34313e6e3b6fd6f909f2b6cc9e209a53b"
+    },
+    "materials/NOTICE.txt": {
+      "bytes": 1066,
+      "sha256": "d577cdf7202ae22f2b19ace348b0ec69958a59aaf51d30cdab902bf7c1e67d78"
+    },
+    "materials/requirements-inference.txt": {
+      "bytes": 14,
+      "sha256": "c8c4212486d438306ed99d72a791827dd55351e26b0bd92a6c4110708763bce4"
+    },
+    "materials/requirements-report.txt": {
+      "bytes": 17,
+      "sha256": "c313af3ee16c569faebfc79847e0ec11f2c7195a4213c7e524212a317e18f312"
+    },
+    "materials/requirements-train.txt": {
+      "bytes": 72,
+      "sha256": "6d40fd9073b720835b5023291797f0ccc1759d807aac1df6cf32901a01ff1963"
+    },
+    "materials/research-records.zip": {
+      "bytes": 514667,
+      "sha256": "8a7d67aaf785ea8d2106f16f61a82a47b9b786441e2d8d8f1ceb1c938c82ef61"
+    },
+    "materials/test-score.json": {
+      "bytes": 187,
+      "sha256": "529319ecaac11bf9fc4ade55592d967fd87474dea891d443e5e2b8fac25524f8"
+    },
+    "materials/validation-score.json": {
+      "bytes": 193,
+      "sha256": "839d5c3445a4c116fda95470a73f98a8c80053f9f62e032ea15886934e52fa3a"
+    },
+    "README.md": {
+      "bytes": 7738,
+      "sha256": "02d334876e1ff557fa823f63d15ded1757b1aa90207db461d258802f30385047"
+    },
+    "REPORT.md": {
+      "bytes": 16598,
+      "sha256": "037e9b568ade39bce61b9fea6a44eaa064da1f49e1f0f616dee12928e29b307f"
+    },
+    "REPORT.pdf": {
+      "bytes": 108995,
+      "sha256": "6907a2b553675a153a047e7e291146698a6528c8bf9fe43c9e51dca63d5d8166"
+    },
+    "training/archive/requirements.txt": {
+      "bytes": 72,
+      "sha256": "6d40fd9073b720835b5023291797f0ccc1759d807aac1df6cf32901a01ff1963"
+    },
+    "training/archive/round108-original-training.json": {
+      "bytes": 17117,
+      "sha256": "4bf8310038b72b1a01df02930d6f74ac7de8d9f875ebb285e77b0889d82556c3"
+    },
+    "training/archive/round109-original-training.json": {
+      "bytes": 22008,
+      "sha256": "278bc7fbf5e9ef23612ee83999d3e86f952301f94966614b9b628c8ffd11b5ef"
+    },
+    "training/archive/round110-original-training.json": {
+      "bytes": 27147,
+      "sha256": "33fd59285ec094b0b782294cb71e4658f51793b9be5779d61693394abc314043"
+    },
+    "training/archive/round120-original-training.json": {
+      "bytes": 21994,
+      "sha256": "b0757fa5338eccc27318a61e22b31e64caab088ccd9b70843d9c5d853e1b9c6a"
+    },
+    "training/archive/round123-original-training.json": {
+      "bytes": 37917,
+      "sha256": "d3604f78b5dfbebbade6046addf2767d6ffe07ddb235b79a3e8e40a7167177ae"
+    },
+    "training/archive/source/audit_round123_grounded_chain.py": {
+      "bytes": 4632,
+      "sha256": "5a13320405e12e440d5f206c2b5a194690a5b87a30509e42f5cfe25b4db1ca9c"
+    },
+    "training/archive/source/audit_round137_joint_retrain.py": {
+      "bytes": 7699,
+      "sha256": "cad7a1b1c24c55cbaf6f55532e6bdfa22a23af00f0986aede34494cc1c59198b"
+    },
+    "training/archive/source/common.py": {
+      "bytes": 4192,
+      "sha256": "aecd10f7ff2e9e82ac5673d34d576e122caac51d2caaa7c7a8aa05906da51f6c"
+    },
+    "training/archive/source/evaluate_round108_group_subsets.py": {
+      "bytes": 14163,
+      "sha256": "a17af521e3a3d8ddc607a7256858c75d019dfb8a9054d8b10bc101123e0eaf8a"
+    },
+    "training/archive/source/features.py": {
+      "bytes": 2049,
+      "sha256": "4ae58271c7a298f39700a23e9caaa2adf9d381c8419d636119f44f8a069b24af"
+    },
+    "training/archive/source/features_round4.py": {
+      "bytes": 6684,
+      "sha256": "76823c77ae51538be19f1f578949448f715622011d1725ff8dc648273acedd36"
+    },
+    "training/archive/source/method_round108_group_subsets.py": {
+      "bytes": 4255,
+      "sha256": "1dfd230664f0dcff844078028b49ffe76e225f8e33eddd024ce3693e4e3f46b0"
+    },
+    "training/archive/source/method_round109_arithmetic_residual.py": {
+      "bytes": 2715,
+      "sha256": "778deb806bf9b9c5c7fd2e600ea9940b839c255aca58d04672ea03bedaf721c5"
+    },
+    "training/archive/source/method_round11.py": {
+      "bytes": 2422,
+      "sha256": "9b7a313f780e94d2ce79e5542e5d2fdf0045d1edb07bce717d3b6eeaebe33d8a"
+    },
+    "training/archive/source/method_round110_residual_ablation.py": {
+      "bytes": 2530,
+      "sha256": "d78b5860fd4a690938be8f1caea6446bea2c1b7f9614fe85c154be2474c9da93"
+    },
+    "training/archive/source/method_round120_question_interaction.py": {
+      "bytes": 3676,
+      "sha256": "2692ce290fb440ff69038bfa7bf685a8ce0fb43f0be547f1347467c7c46869d0"
+    },
+    "training/archive/source/method_round123_grounded_chain.py": {
+      "bytes": 7255,
+      "sha256": "eef68c8a36589398f1b3dc4a6d35abd2702a3d708507cfc30d15ed35d1691f2c"
+    },
+    "training/archive/source/method_round12_dependency.py": {
+      "bytes": 5049,
+      "sha256": "137467338d44547513bc1b41bfb1a2d49190b53c89ed68a3cc5fab11421a2bdc"
+    },
+    "training/archive/source/method_round137_joint_retrain.py": {
+      "bytes": 3116,
+      "sha256": "30e1945c79af9415cadb4fd8f84846ae18091854df0abca88f5e5c5ab638dd10"
+    },
+    "training/archive/source/method_round2.py": {
+      "bytes": 1381,
+      "sha256": "c5d4c85b33eea843aa733c95836ee0b18b294ba1702cc3f36cdcdbe9afd73a4d"
+    },
+    "training/archive/source/method_round7_gated.py": {
+      "bytes": 1118,
+      "sha256": "f61b12e6ba73a198742b19e6a10f727946a8a3173140dcd2032555921f2761a6"
+    },
+    "training/archive/source/method_round7_v3.py": {
+      "bytes": 2525,
+      "sha256": "a872f363881091ddf9173078e6b36c41dbe0a4dcb07e7a2c60f3caa136f3b24c"
+    },
+    "training/archive/source/numeric_round7_v3.py": {
+      "bytes": 5417,
+      "sha256": "4d5c08dea400ddc9b1ac33b7a58c699d94243e0ee611cc2064f9e6d79dd3b3e8"
+    },
+    "training/archive/source/train_round1.py": {
+      "bytes": 4703,
+      "sha256": "cad7b1b25e413d64f81303370879b2bd1b3cd171758743bb60b4f78ac83bb8c4"
+    },
+    "training/archive/source/train_round108_group_subsets.py": {
+      "bytes": 14022,
+      "sha256": "440cf237ccbded482516bbea5184c873886328c1be7bbfbefab238129d1c85f8"
+    },
+    "training/archive/source/train_round109_arithmetic_residual.py": {
+      "bytes": 14696,
+      "sha256": "faaa55a7790b88e0dafd42a38e5257b4ba1aaa483930e772b9987d56685081fe"
+    },
+    "training/archive/source/train_round110_residual_ablation.py": {
+      "bytes": 12221,
+      "sha256": "b4c77f6d3d58be0d97d1c122f15801e0c583343cdb3eba021057efc2e6ecd09b"
+    },
+    "training/archive/source/train_round120_question_interaction.py": {
+      "bytes": 12125,
+      "sha256": "9e7a5593edf83f229c19c7a47c2280537d246c74e91490d609832f96d83b1b23"
+    },
+    "training/archive/source/train_round121_regularization.py": {
+      "bytes": 10268,
+      "sha256": "fdbd356ccc400522c6c01974def977f916b18ee966e09900b6dedf6de3b28aba"
+    },
+    "training/archive/source/train_round123_grounded_chain.py": {
+      "bytes": 21807,
+      "sha256": "61fe4fa636b80b77e01a8f4ed81f98f1f4f820e3709f2d378c64ba64ac222c1a"
+    },
+    "training/archive/source/train_round137_joint_retrain.py": {
+      "bytes": 13370,
+      "sha256": "4ebb0c0f5ccd4b19ada3325f93c8424ad2ae5fb97cf8d464c9e68e914edd30fb"
+    },
+    "training/parents/fold0.npz": {
+      "bytes": 62270,
+      "sha256": "51170bf4b51750bf561bd2e70205be66fd9c79a2566c510caa9ae4b92c6b55a1"
+    },
+    "training/parents/fold1.npz": {
+      "bytes": 62270,
+      "sha256": "fe76cf13402038b694db9cb43c53cb7145239828e36ca9a0377e3383dab45709"
+    },
+    "training/parents/fold2.npz": {
+      "bytes": 62270,
+      "sha256": "33bdde41647d059c5ff981a0349c9606590b8ad7f3ba42101d6a4b19bf768406"
+    },
+    "training/parents/folds.json": {
+      "bytes": 182327,
+      "sha256": "63decfe02c761625152effd60dde1ab3be6b32b1ebf67e888a5630fefef32ee7"
+    },
+    "training/parents/full.npz": {
+      "bytes": 62270,
+      "sha256": "a410fb64d203e6d009931030b80db3248044b5cc110e637ec5ad1516cc2ee665"
+    },
+    "training/parents/parent-oof-scores.npy": {
+      "bytes": 152288,
+      "sha256": "1ce1d590d03149eb70cb7ffa849a0757282f7c0c3b7166005339976b17d59518"
+    },
+    "training/parents/train-data-manifest.json": {
+      "bytes": 400,
+      "sha256": "6cd8d552d2e1ad7326f51ed4a6661f1459a9160ca1b5098c5f8dc39ce49e9f1e"
+    },
+    "training/provenance/manifest.json": {
+      "bytes": 19420,
+      "sha256": "e3ea5c015d6f30ba004314d0e972005e9b08de2806d0d634bd03ef401f28a3cd"
+    },
+    "training/provenance/original-round137-audit.json": {
+      "bytes": 222664,
+      "sha256": "96ac7df7f18f239dd80fddc598c08495e31079a4a4364a7621fcc2e636bea330"
+    },
+    "training/provenance/original-round137-process-monitor.json": {
+      "bytes": 95,
+      "sha256": "c9bbad68f24acc7d3e312441e79fa787483ab5f5602b38f6cb22b5d74b29159d"
+    },
+    "training/provenance/original-round137-train-selection.json": {
+      "bytes": 4716,
+      "sha256": "defe66b06123b5f57ef6d6986bd9e8d197ffe8cdcb5000d64a51c195f6564f17"
+    },
+    "training/provenance/original-round137-training.json": {
+      "bytes": 38593,
+      "sha256": "0c4a1a1803628932aeef935465c52eea48a6a0cb25a3311760912f37c94222ca"
+    },
+    "training/provenance/static-release-checks.json": {
+      "bytes": 724,
+      "sha256": "f3738c51c188a43508d0ee49257ce88e77ee0f3ccbbf080f5581646136205cab"
+    },
+    "training/rebuild_parent_centers.py": {
+      "bytes": 10735,
+      "sha256": "0f9c873054ed34abd252ee352aecd947794082b357eadedf5d71d7516975cba4"
+    },
+    "training/replay_round137.py": {
+      "bytes": 14687,
+      "sha256": "e97ef03aef2e07812dfdd55f30fdbb02ce38592156be379d128ed6010c0f12ef"
+    },
+    "training/requirements.txt": {
+      "bytes": 51,
+      "sha256": "865c2e3164b687bf48cb544967a29cbb385bdce9fc3206901bf312c8c1454de6"
+    },
+    "training/source/common.py": {
+      "bytes": 4192,
+      "sha256": "aecd10f7ff2e9e82ac5673d34d576e122caac51d2caaa7c7a8aa05906da51f6c"
+    },
+    "training/source/features.py": {
+      "bytes": 2049,
+      "sha256": "4ae58271c7a298f39700a23e9caaa2adf9d381c8419d636119f44f8a069b24af"
+    },
+    "training/source/features_round4.py": {
+      "bytes": 6684,
+      "sha256": "76823c77ae51538be19f1f578949448f715622011d1725ff8dc648273acedd36"
+    },
+    "training/source/method_round108_group_subsets.py": {
+      "bytes": 4255,
+      "sha256": "1dfd230664f0dcff844078028b49ffe76e225f8e33eddd024ce3693e4e3f46b0"
+    },
+    "training/source/method_round109_arithmetic_residual.py": {
+      "bytes": 2715,
+      "sha256": "778deb806bf9b9c5c7fd2e600ea9940b839c255aca58d04672ea03bedaf721c5"
+    },
+    "training/source/method_round11.py": {
+      "bytes": 2422,
+      "sha256": "9b7a313f780e94d2ce79e5542e5d2fdf0045d1edb07bce717d3b6eeaebe33d8a"
+    },
+    "training/source/method_round110_residual_ablation.py": {
+      "bytes": 2530,
+      "sha256": "d78b5860fd4a690938be8f1caea6446bea2c1b7f9614fe85c154be2474c9da93"
+    },
+    "training/source/method_round120_question_interaction.py": {
+      "bytes": 3676,
+      "sha256": "2692ce290fb440ff69038bfa7bf685a8ce0fb43f0be547f1347467c7c46869d0"
+    },
+    "training/source/method_round123_grounded_chain.py": {
+      "bytes": 7255,
+      "sha256": "eef68c8a36589398f1b3dc4a6d35abd2702a3d708507cfc30d15ed35d1691f2c"
+    },
+    "training/source/method_round12_dependency.py": {
+      "bytes": 5049,
+      "sha256": "137467338d44547513bc1b41bfb1a2d49190b53c89ed68a3cc5fab11421a2bdc"
+    },
+    "training/source/method_round137_joint_retrain.py": {
+      "bytes": 3116,
+      "sha256": "30e1945c79af9415cadb4fd8f84846ae18091854df0abca88f5e5c5ab638dd10"
+    },
+    "training/source/method_round2.py": {
+      "bytes": 1381,
+      "sha256": "c5d4c85b33eea843aa733c95836ee0b18b294ba1702cc3f36cdcdbe9afd73a4d"
+    },
+    "training/source/method_round7_gated.py": {
+      "bytes": 1118,
+      "sha256": "f61b12e6ba73a198742b19e6a10f727946a8a3173140dcd2032555921f2761a6"
+    },
+    "training/source/method_round7_v3.py": {
+      "bytes": 2525,
+      "sha256": "a872f363881091ddf9173078e6b36c41dbe0a4dcb07e7a2c60f3caa136f3b24c"
+    },
+    "training/source/numeric_round7_v3.py": {
+      "bytes": 5417,
+      "sha256": "4d5c08dea400ddc9b1ac33b7a58c699d94243e0ee611cc2064f9e6d79dd3b3e8"
+    },
+    "training/source/replay_utils.py": {
+      "bytes": 6607,
+      "sha256": "650841ece6b12f29cec8555a017b36a16b8b942a3a85c5122b64a264a76cafa8"
+    },
+    "training/SUMMARY.md": {
+      "bytes": 2138,
+      "sha256": "a14bd229d7038d3829e1cdaff6bdfca92b4dd93f9939b3565979ef6cc3797680"
+    },
+    "training/TRAINING_REPRODUCE.md": {
+      "bytes": 12809,
+      "sha256": "b194ab432e2d19b290d976093eb6f36e0f151beb2e64d8e86ef481de0a1a5ffb"
+    }
+  }
+}

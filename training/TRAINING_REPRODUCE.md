@@ -4,21 +4,21 @@ Author: Liang Zefeng, student ID 3036798641.
 
 ## Scope and verification status
 
-The submitted model is **Round137 joint, lambda 1**, a 5,180-weight proximal update of the fixed four-block Round123 parent. The inference checkpoint is frozen. Preparing this release did **not** run training, prediction, or scoring, and did not alter the submitted weights.
+The submitted model is **proximal joint-update experiment joint, lambda 1**, a 5,180-weight proximal update of the fixed four-block grounded-chain control parent. The inference checkpoint is frozen. Preparing this release did **not** run training, prediction, or scoring, and did not alter the submitted weights.
 
 There are three different reproduction tasks:
 
 | Task | Entry and inputs | Status |
 |---|---|---|
 | Score the submitted frozen model without retraining | Repository inference instructions; `code/checkpoint/` | Uses the original frozen inference source and two-file checkpoint |
-| Repeat the 20-fit Round137 experiment from the exact saved train-only parent centers | `training/replay_round137.py`, official train data, included `training/parents/` | Primary training reproduction route; mathematical helpers are exact AST copies of original source. New portable wrapper was statically inspected, **not executed after freeze** |
-| Rebuild the fixed selected parent chain from train inputs, then repeat Round137 | Optional `training/rebuild_parent_centers.py`, followed by replay with `--parents-dir` | Authored reference implementation; **not numerically validated after freeze**. It does not repeat all historical searches |
+| Repeat the 20-fit proximal joint-update experiment experiment from the exact saved train-only parent centers | `training/replay_round137.py`, official train data, included `training/parents/` | Primary training reproduction route; mathematical helpers are exact AST copies of original source. New portable wrapper was statically inspected, **not executed after freeze** |
+| Rebuild the fixed selected parent chain from train inputs, then repeat proximal joint-update experiment | Optional `training/rebuild_parent_centers.py`, followed by replay with `--parents-dir` | Authored reference implementation; **not numerically validated after freeze**. It does not repeat all historical searches |
 
 Do not describe the saved-parent replay as training every historical component from scratch. The numerical checks in archived original records describe the original experiments, not a fresh execution of these release wrappers.
 
 ## Installation
 
-Original training used Python **3.12.14**, NumPy **2.5.3**, SciPy **1.18.1**, scikit-learn **1.9.1**, and threadpoolctl **3.7.0**. Frozen inference needs NumPy only. The primary Round137 replay needs NumPy, SciPy, and threadpoolctl; optional parent rebuilding additionally needs scikit-learn.
+Original training used Python **3.12.14**, NumPy **2.5.3**, SciPy **1.18.1**, scikit-learn **1.9.1**, and threadpoolctl **3.7.0**. Frozen inference needs NumPy only. The primary proximal joint-update experiment replay needs NumPy, SciPy, and threadpoolctl; optional parent rebuilding additionally needs scikit-learn.
 
 From the repository root, install in a Python virtual environment:
 
@@ -34,7 +34,7 @@ python -m pip install -r training/archive/requirements.txt
 
 Obtain the unmodified official repository/data from <https://github.com/xudongwu-0/DASE7506-MP2>. Pass the **official `code/data` directory** to `--data-dir`. The training scripts open only `manifest.json`, `candidates/gsm8k_train.jsonl`, `candidates/gsm8k_train.npz`, and `gsm8k_train.jsonl`. Original train-file SHA-256 values are in `parents/train-data-manifest.json`; mismatches stop execution. The large official data files are not duplicated in this release.
 
-## Primary route: exact saved-parent Round137 replay
+## Primary route: exact saved-parent proximal joint-update experiment replay
 
 Run from the repository root, replacing the example data path:
 
@@ -85,10 +85,10 @@ The answer-group features and four blocks are unchanged:
 
 | Block | Dimensions | Original source |
 |---|---:|---|
-| A: group Embedding, support, dispersion, and numerical features | 1,034 | Round108 subset-augmented ranker |
-| L: local arithmetic and late boxed-answer evidence | 26 | Round110 final-evidence residual |
-| I: signed 128-bucket question unigram/bigram hash × 32 evidence features | 4,096 | Round120 question-both interaction |
-| G: numerical grounding and final-equation ancestry | 24 | Round123 both residual |
+| A: group Embedding, support, dispersion, and numerical features | 1,034 | subset-augmented group anchor subset-augmented ranker |
+| L: local arithmetic and late boxed-answer evidence | 26 | local-evidence residual final-evidence residual |
+| I: signed 128-bucket question unigram/bigram hash × 32 evidence features | 4,096 | question–evidence interaction model question-both interaction |
+| G: numerical grounding and final-equation ancestry | 24 | grounded-chain control both residual |
 
 The exact original full-train and three fit-only parent centers contain each block's weights, means, and scales. A fold center was trained without that fold's held questions. The replay recomputes input features, reproduces each held parent score within `1e-10`, and uses the corresponding frozen fold center. No full-train scaler is substituted into a fold.
 
@@ -118,7 +118,7 @@ These are development metrics after selecting hyperparameters on those OOF resul
 
 This is an **unexecuted after-freeze reference wrapper**. It reconstructs the fixed chosen chain from the official training data, without using saved learned parent arrays in fitting. Comparisons to the saved centers are made only after the 25 fits. It stops if the arrays/OOF do not agree within `1e-8` and preserves the comparison report. Do not cite it as a numerically verified clean-room rerun.
 
-**Tolerance distinction:** the optional rebuild's array and OOF comparison uses `rtol=atol=1e-8`. The Round137 replay preserves the original, stricter held-parent score check of `rtol=atol=1e-10`, including when a rebuilt bundle is supplied. Passing the rebuild's `1e-8` check therefore does not guarantee that replay will accept its held scores at `1e-10`. If the latter check fails, replay stops before fitting the affected fold and preserves any earlier completed fold records; report the discrepancy rather than describing it as successful reproduction. The exact saved-parent route retains the original `1e-10` check unchanged.
+**Tolerance distinction:** the optional rebuild's array and OOF comparison uses `rtol=atol=1e-8`. The proximal joint-update experiment replay preserves the original, stricter held-parent score check of `rtol=atol=1e-10`, including when a rebuilt bundle is supplied. Passing the rebuild's `1e-8` check therefore does not guarantee that replay will accept its held scores at `1e-10`. If the latter check fails, replay stops before fitting the affected fold and preserves any earlier completed fold records; report the discrepancy rather than describing it as successful reproduction. The exact saved-parent route retains the original `1e-10` check unchanged.
 
 ```sh
 python -X utf8 training/rebuild_parent_centers.py --data-dir /path/to/official/code/data
@@ -127,17 +127,19 @@ python -X utf8 training/replay_round137.py --data-dir /path/to/official/code/dat
 
 The parent reconstruction does **25 fixed fits**:
 
-1. Round108 A uses original full-group means/scales and all nonempty same-answer subsets, lambda `0.01`: three outer fits and one full fit.
+1. subset-augmented group anchor A uses original full-group means/scales and all nonempty same-answer subsets, lambda `0.01`: three outer fits and one full fit.
 2. Nine additional A fits produce three inner OOF partitions inside each outer fit, with seeds `20261030 + outer_fold`.
-3. Round110 L uses the 26 original final-evidence features, lambda `0.1`: three outer fits use the nested A OOF margin; the full fit uses global A OOF margins.
-4. Round120 I uses lambda `0.1` and the corresponding same-fit frozen A+L margin: three outer fits and one full fit.
-5. Round123 G uses the fixed selected 24-feature both family, lambda `0.01`, and the corresponding same-fit frozen A+L+I margin: three outer fits and one full fit.
+3. local-evidence residual L uses the 26 original final-evidence features, lambda `0.1`: three outer fits use the nested A OOF margin; the full fit uses global A OOF margins.
+4. question–evidence interaction model I uses lambda `0.1` and the corresponding same-fit frozen A+L margin: three outer fits and one full fit.
+5. grounded-chain control G uses the fixed selected 24-feature both family, lambda `0.01`, and the corresponding same-fit frozen A+L+I margin: three outer fits and one full fit.
 
 It regenerates fixed folds, fits all scalers on their appropriate training indices, and writes a new `parents/` bundle. Adding the 20-fit replay gives **45 fits for the fixed selected chain**. This reconstructs the chosen model recipe; it does not repeat every historic search, failed branch, source-integrity audit, or later human final-model choice.
 
 ## Archived original sources and provenance
 
-`archive/source/` contains the complete local Python import closure (26 files) rooted at the original Round108/109/110/120/123/137 training and relevant audit entries. These are preserved for inspection, with original SHA-256s in `provenance/manifest.json`. `source/` holds the 15-file inference feature closure and the exact copied replay math helpers. Code duplication preserves old source bytes and is intentional.
+Historical plan documents are bundled in `materials/research-records.zip`, under `training/archive/plans/`. Extract those before following the original-layout inspection instructions below.
+
+`archive/source/` contains the complete local Python import closure (26 files) rooted at the original subset-augmented group anchor/109/110/120/123/137 training and relevant audit entries. These are preserved for inspection, with original SHA-256s in `provenance/manifest.json`. `source/` holds the 15-file inference feature closure and the exact copied replay math helpers. Code duplication preserves old source bytes and is intentional.
 
 For inspecting original entry points in their original relative layout, copy `archive/source/*.py` into a **separate research workspace `code/`**, copy `archive/plans/` into that workspace's parent, and obtain official `code/data/`. Do not overwrite this release's frozen inference files. The old entry points still expect historical `runs/...` metadata, feature caches, parent artifacts, and hash manifests; **merely copying the files is not a turnkey historical rerun**. The portable replay and optional fixed-chain reconstruction avoid those historical path requirements.
 
@@ -145,4 +147,4 @@ For inspecting original entry points in their original relative layout, copy `ar
 
 Both portable entries cap numerical libraries at **four total CPU threads** and use a **600-second worker timeout**. The assignment's 16 MiB / 30-second constraints concern the frozen inference assets and complete official prediction-plus-scoring run; training logs and parents are not runtime dependencies.
 
-The user chose the final joint family after observing test scores. The original within-family lambda selection was train OOF; the final human family choice was test-informed. This protocol deviation is disclosed in the report and must not be described as independent test-based generalization evidence.
+The user chose the final joint family after observing test scores. The original within-family lambda selection was train OOF; the final human family choice was test-informed. The report distinguishes training-only parameter selection from final model selection.
