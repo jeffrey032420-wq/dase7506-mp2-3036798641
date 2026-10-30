@@ -86,4 +86,4 @@ Final parameter SHA-256: `61ff97395a049186e4f2887043d9e1b0755414a0fe42e34a81bba1
 
 Only `code/checkpoint/` is loaded as additional inference assets. Training parents and reports are not inference dependencies. The original 20-fit proximal joint-update worker took approximately 27.376 seconds; this excludes parent training, audits, evaluation and preceding searches.
 
-The submitted code version is the Git commit at the linked repository URL; use an immutable `tree/<commit>` link for final submission. Match it with the checkpoint directory or ZIP in that same commit. Any future documentation update must preserve this model's source/asset hashes.
+The submitted code version is the Git commit at the linked repository URL; use an immutable `tree/<commit>` link for final submission. Use the checkpoint directory from that same commit. Any future documentation update must preserve this model's source/asset hashes.
