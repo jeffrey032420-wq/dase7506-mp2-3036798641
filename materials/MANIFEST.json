@@ -103,8 +103,8 @@
       "sha256": "fe12b809b82117aea722e5dfef7a55a88950a7cf50c49ec2ea007ea847959960"
     },
     "materials/AI_DISCLOSURE.md": {
-      "bytes": 1619,
-      "sha256": "39c8c7ecc5aea65e409e22eac1f6c9d60301db1297d01c1102d411c0bcc29118"
+      "bytes": 1380,
+      "sha256": "9a36acc67cbeb8172c4dfe07769262d00f18e626f84623247034dc5389005e9d"
     },
     "materials/ATTRIBUTION.md": {
       "bytes": 3868,
@@ -175,8 +175,8 @@
       "sha256": "f1b15a93aad81c93501498c685c1e792ad29f55c48802991cc6ca9c6971fa95b"
     },
     "training/TRAINING_REPRODUCE.md": {
-      "bytes": 13060,
-      "sha256": "27e0428b55ac91d3cf1ddcf0c7c0e07c4900c02eae7684e523f1803ddcf2486c"
+      "bytes": 12676,
+      "sha256": "cdeda4dd745f0bd2e3a9985bf707c1fc41c2c2f0cd2f3537dc84ad084d38241d"
     },
     "training/archive/requirements.txt": {
       "bytes": 72,

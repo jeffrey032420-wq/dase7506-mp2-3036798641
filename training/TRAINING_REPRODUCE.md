@@ -147,4 +147,3 @@ For inspecting original entry points in their original relative layout, copy `ar
 
 Both portable entries cap numerical libraries at **four total CPU threads** and use a **600-second worker timeout**. The assignment's 16 MiB / 30-second constraints concern the frozen inference assets and complete official prediction-plus-scoring run; training logs and parents are not runtime dependencies.
 
-The user chose the final joint family after observing test scores. The original within-family lambda selection was train OOF; the final human family choice was test-informed. The original experiment records preserve this distinction.
