@@ -99,8 +99,8 @@
       "sha256": "5e48aa68be64e37bd31468c952d0bef214aa945604dd104c27ba712a54abefde"
     },
     "materials/build_report.py": {
-      "bytes": 8248,
-      "sha256": "bbdde5fbdd6729847e4d6a3422cb65305255f9ff06fd82b48d2f31e67b4add61"
+      "bytes": 8224,
+      "sha256": "41faf744096f5374f5f14ba3ae70601b3a133e97766a289ede024cdaa0d25dfc"
     },
     "materials/evaluate_frozen.py": {
       "bytes": 3400,
@@ -143,16 +143,16 @@
       "sha256": "839d5c3445a4c116fda95470a73f98a8c80053f9f62e032ea15886934e52fa3a"
     },
     "README.md": {
-      "bytes": 7738,
-      "sha256": "02d334876e1ff557fa823f63d15ded1757b1aa90207db461d258802f30385047"
+      "bytes": 7024,
+      "sha256": "25d8eb6a34e7fe873a6e546134a78e205047d1b96a674f5d5c6b05113124889e"
     },
     "REPORT.md": {
-      "bytes": 16598,
-      "sha256": "037e9b568ade39bce61b9fea6a44eaa064da1f49e1f0f616dee12928e29b307f"
+      "bytes": 16420,
+      "sha256": "097112facd9367f41c663780ce2a0517aa41c23e76d70a32f78e71a7aa07978a"
     },
     "REPORT.pdf": {
-      "bytes": 108995,
-      "sha256": "6907a2b553675a153a047e7e291146698a6528c8bf9fe43c9e51dca63d5d8166"
+      "bytes": 108384,
+      "sha256": "2ce33c6c24a0769668897a7d9da685acb48dc8e158de9d2b43923b82ad6a5a26"
     },
     "training/archive/requirements.txt": {
       "bytes": 72,

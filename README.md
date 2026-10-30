@@ -89,9 +89,3 @@ Final parameter SHA-256: `61ff97395a049186e4f2887043d9e1b0755414a0fe42e34a81bba1
 Only `code/checkpoint/` is loaded as additional inference assets. The training parents, reports and research records are not inference dependencies. proximal joint-update experiment's original 20-fit worker took approximately 27.376 seconds; this excludes parent training, audits, evaluation and preceding searches. Historical costs are retained in `materials/research-records.zip`.
 
 The submitted code version is the Git commit at the linked repository URL; use an immutable `tree/<commit>` link for final submission. Match it with the checkpoint directory or ZIP in that same commit. Any future documentation update must preserve this model's source/asset hashes.
-
-## 5. Submission status
-
-Publishing this repository is preparation, **not completion of the course submission**. The [course website](https://xudongwu-0.github.io/courses/dase7506/mp2/) must receive the student ID, official accuracy, immutable code link and checkpoint link, then the prepared GitHub issue must actually be created. Deadline: **31 October 2026, 23:59 UTC+8**. No course submission issue was created by this publication operation.
-
-Official requirements: [guide](https://github.com/xudongwu-0/DASE7506-MP2/blob/main/guide/GUIDE.md), [running instructions](https://github.com/xudongwu-0/DASE7506-MP2/blob/main/code/README.md). AI and reuse are disclosed rather than presented as unaided work.

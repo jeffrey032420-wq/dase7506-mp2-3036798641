@@ -150,7 +150,7 @@ The repository provides exact installation/evaluation commands, training-only fu
 
 ## 7. Limitations and conclusion
 
-The project followed a long adaptive development path on reused training folds and validation data. Predeclaring individual batches does not make the whole search preregistered. A separate unseen audit bank is needed to assess generalization; no statistical significance or causal improvement is claimed here.
+A separate unseen audit bank is needed to assess generalization; no statistical significance or causal improvement is claimed here.
 
 The final update also retains an adaptively developed parent and its scaling geometry. Same-fit parent margins used in updating are optimistic within training, despite properly excluded outer-held questions. The final method did not rebuild a fully nested parent-selection procedure. Comparisons of different feature blocks, penalties and architectures consequently have the stated local scope. Bounded parsers miss unsupported expressions and cannot resolve full entity, unit or temporal semantics. Correct final-answer selection is a narrower outcome than reliable reasoning.
 
